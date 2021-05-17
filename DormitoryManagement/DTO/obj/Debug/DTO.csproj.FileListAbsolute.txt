@@ -1,0 +1,36 @@
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DormitoryManagement\DTO\bin\Debug\DTO.dll
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DormitoryManagement\DTO\bin\Debug\DTO.pdb
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DormitoryManagement\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DormitoryManagement\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DormitoryManagement\DTO\obj\Debug\DTO.dll
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DormitoryManagement\DTO\obj\Debug\DTO.pdb
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS\DormitoryManagement\DTO\bin\Debug\DTO.dll
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS\DormitoryManagement\DTO\bin\Debug\DTO.pdb
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS\DormitoryManagement\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS\DormitoryManagement\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS\DormitoryManagement\DTO\obj\Debug\DTO.dll
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS\DormitoryManagement\DTO\obj\Debug\DTO.pdb
+C:\Users\goldjapan\Desktop\DBMS\DormitoryManagement\DTO\bin\Debug\DTO.dll
+C:\Users\goldjapan\Desktop\DBMS\DormitoryManagement\DTO\bin\Debug\DTO.pdb
+C:\Users\goldjapan\Desktop\DBMS\DormitoryManagement\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\goldjapan\Desktop\DBMS\DormitoryManagement\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\goldjapan\Desktop\DBMS\DormitoryManagement\DTO\obj\Debug\DTO.dll
+C:\Users\goldjapan\Desktop\DBMS\DormitoryManagement\DTO\obj\Debug\DTO.pdb
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS2\DormitoryManagement\DTO\bin\Debug\DTO.dll
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS2\DormitoryManagement\DTO\bin\Debug\DTO.pdb
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS2\DormitoryManagement\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS2\DormitoryManagement\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS2\DormitoryManagement\DTO\obj\Debug\DTO.dll
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS2\DormitoryManagement\DTO\obj\Debug\DTO.pdb
+C:\Users\goldjapan\Desktop\DBMS2\DormitoryManagement\DTO\bin\Debug\DTO.dll
+C:\Users\goldjapan\Desktop\DBMS2\DormitoryManagement\DTO\bin\Debug\DTO.pdb
+C:\Users\goldjapan\Desktop\DBMS2\DormitoryManagement\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\goldjapan\Desktop\DBMS2\DormitoryManagement\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\goldjapan\Desktop\DBMS2\DormitoryManagement\DTO\obj\Debug\DTO.dll
+C:\Users\goldjapan\Desktop\DBMS2\DormitoryManagement\DTO\obj\Debug\DTO.pdb
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS3\DormitoryManagement\DTO\bin\Debug\DTO.dll
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS3\DormitoryManagement\DTO\bin\Debug\DTO.pdb
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS3\DormitoryManagement\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS3\DormitoryManagement\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS3\DormitoryManagement\DTO\obj\Debug\DTO.dll
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS3\DormitoryManagement\DTO\obj\Debug\DTO.pdb
