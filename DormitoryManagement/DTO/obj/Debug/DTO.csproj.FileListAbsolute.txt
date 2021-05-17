@@ -34,3 +34,9 @@ e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS3\Dormitory
 e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS3\DormitoryManagement\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS3\DormitoryManagement\DTO\obj\Debug\DTO.dll
 e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS3\DormitoryManagement\DTO\obj\Debug\DTO.pdb
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS_Final\DormitoryManagement\DTO\bin\Debug\DTO.dll
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS_Final\DormitoryManagement\DTO\bin\Debug\DTO.pdb
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS_Final\DormitoryManagement\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS_Final\DormitoryManagement\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS_Final\DormitoryManagement\DTO\obj\Debug\DTO.dll
+e:\NAM_2\HK2\He quan tri CSDL - DBMS\DoAnCuoiKy\Nhom07_LopSangT3\DBMS_Final\DormitoryManagement\DTO\obj\Debug\DTO.pdb

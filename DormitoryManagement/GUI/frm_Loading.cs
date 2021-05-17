@@ -7,32 +7,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
 
 namespace GUI
 {
     public partial class frm_Loading : Form
     {
-        public frm_Loading()
+        private TaiKhoanDTO _tk = new TaiKhoanDTO();
+
+        public frm_Loading(TaiKhoanDTO tk)
         {
             InitializeComponent();
+            this._tk = tk;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(guna2CircleProgressBar1.Value==100)
+            if (guna2CircleProgressBar1.Value == 100)
             {
                 timer1.Stop();
 
-                frm_TrangChu p = new frm_TrangChu();
-                p.Show();
                 this.Hide();
-
+                frm_TrangChu frm_tc = new frm_TrangChu(_tk);
+                frm_tc.ShowDialog();
             }
             else
-            { 
-            guna2CircleProgressBar1.Value += 1;
-            label_val.Text = (Convert.ToInt32(label_val.Text) + 1).ToString();
-              }
+            {
+                guna2CircleProgressBar1.Value += 1;
+                label_val.Text = (Convert.ToInt32(label_val.Text) + 1).ToString();
+            }
         }
 
         private void Loading_Load(object sender, EventArgs e)

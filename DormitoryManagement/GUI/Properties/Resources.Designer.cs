@@ -73,9 +73,9 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Background_SplashScreen {
+        internal static System.Drawing.Bitmap avt1 {
             get {
-                object obj = ResourceManager.GetObject("Background_SplashScreen", resourceCulture);
+                object obj = ResourceManager.GetObject("avt1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

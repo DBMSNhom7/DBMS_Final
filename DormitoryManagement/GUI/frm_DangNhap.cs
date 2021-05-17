@@ -28,7 +28,11 @@ namespace GUI
 
         private void frm_DangNhap_Load(object sender, EventArgs e)
         {
-
+            if (GUI.Properties.Settings.Default.Username != string.Empty)
+            {
+                txb_taiKhoan.Text = GUI.Properties.Settings.Default.Username;
+                txb_matKhau.Text = GUI.Properties.Settings.Default.Password;
+            }
         }
 
         private void btn_thoat_Click(object sender, EventArgs e)
@@ -59,9 +63,22 @@ namespace GUI
                 DatabaseConnection.ChangeConnection(true,
                     _taiKhoanDTO.TenTaiKhoan, _taiKhoanDTO.MatKhau);
 
+                if (tsw_rememberMe.Checked == true)
+                {
+                    GUI.Properties.Settings.Default.Username = taiKhoan;
+                    GUI.Properties.Settings.Default.Password = matKhau;
+                    GUI.Properties.Settings.Default.Save();
+                }
+                else
+                {
+                    GUI.Properties.Settings.Default.Username = string.Empty;
+                    GUI.Properties.Settings.Default.Password = string.Empty;
+                    GUI.Properties.Settings.Default.Save();
+                }
+
                 this.Hide();
-                frm_TrangChu frm_trangChu = new frm_TrangChu();
-                frm_trangChu.ShowDialog();
+                frm_Loading frm_loading = new frm_Loading(_taiKhoanDTO);
+                frm_loading.ShowDialog();
             }
             else
             {

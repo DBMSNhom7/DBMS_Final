@@ -737,7 +737,11 @@ CREATE OR ALTER PROCEDURE spLayTaiKhoan_TheoTenTK
 (@taiKhoan VARCHAR(15))
 AS
 BEGIN
-	SELECT TenTaiKhoan, MatKhau, IDLoaiQuyen
+	SELECT TenTaiKhoan, MatKhau, IDLoaiQuyen,
+	(SELECT TenQuyen FROM dbo.LoaiQuyen
+	WHERE IDLoaiQuyen = TaiKhoan.IDLoaiQuyen) AS TenLoaiQuyen,
+	(SELECT MoTa FROM dbo.LoaiQuyen
+	WHERE IDLoaiQuyen = TaiKhoan.IDLoaiQuyen) AS MoTa
 	FROM dbo.TaiKhoan WHERE TenTaiKhoan = @taiKhoan;
 END
 GO

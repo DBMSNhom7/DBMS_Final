@@ -204,7 +204,7 @@ namespace GUI
             }
         }
 
-        private void dgv_hoaDonDienNuoc_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        private void dgv_hoaDonDienNuoc_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string maHD = dgv_hoaDonDienNuoc.Rows[dgv_hoaDonDienNuoc.CurrentCell.RowIndex].Cells[0].Value.ToString();
 
@@ -229,7 +229,6 @@ namespace GUI
         {
             if (dgv_hoaDonDienNuoc.Rows.Count > 0)
             {
-
                 Microsoft.Office.Interop.Excel.Application xcelApp = new Microsoft.Office.Interop.Excel.Application();
                 xcelApp.Application.Workbooks.Add(Type.Missing);
 

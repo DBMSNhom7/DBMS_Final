@@ -54,7 +54,7 @@ namespace GUI
             this.lb_dienThoai.AutoSize = true;
             this.lb_dienThoai.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_dienThoai.ForeColor = System.Drawing.Color.White;
-            this.lb_dienThoai.Location = new System.Drawing.Point(33, 222);
+            this.lb_dienThoai.Location = new System.Drawing.Point(33, 217);
             this.lb_dienThoai.Name = "lb_dienThoai";
             this.lb_dienThoai.Size = new System.Drawing.Size(109, 25);
             this.lb_dienThoai.TabIndex = 27;
@@ -65,7 +65,7 @@ namespace GUI
             this.lb_diaChi.AutoSize = true;
             this.lb_diaChi.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_diaChi.ForeColor = System.Drawing.Color.White;
-            this.lb_diaChi.Location = new System.Drawing.Point(33, 178);
+            this.lb_diaChi.Location = new System.Drawing.Point(33, 177);
             this.lb_diaChi.Name = "lb_diaChi";
             this.lb_diaChi.Size = new System.Drawing.Size(79, 25);
             this.lb_diaChi.TabIndex = 26;
@@ -76,7 +76,7 @@ namespace GUI
             this.lb_quanHeVoiSV.AutoSize = true;
             this.lb_quanHeVoiSV.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_quanHeVoiSV.ForeColor = System.Drawing.Color.White;
-            this.lb_quanHeVoiSV.Location = new System.Drawing.Point(33, 145);
+            this.lb_quanHeVoiSV.Location = new System.Drawing.Point(33, 139);
             this.lb_quanHeVoiSV.Name = "lb_quanHeVoiSV";
             this.lb_quanHeVoiSV.Size = new System.Drawing.Size(153, 25);
             this.lb_quanHeVoiSV.TabIndex = 25;
@@ -87,7 +87,7 @@ namespace GUI
             this.lb_gioiTinh.AutoSize = true;
             this.lb_gioiTinh.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_gioiTinh.ForeColor = System.Drawing.Color.White;
-            this.lb_gioiTinh.Location = new System.Drawing.Point(33, 101);
+            this.lb_gioiTinh.Location = new System.Drawing.Point(33, 100);
             this.lb_gioiTinh.Name = "lb_gioiTinh";
             this.lb_gioiTinh.Size = new System.Drawing.Size(94, 25);
             this.lb_gioiTinh.TabIndex = 24;
@@ -130,7 +130,7 @@ namespace GUI
             this.panel1.Controls.Add(this.lb_gioiTinh);
             this.panel1.Controls.Add(this.lb_quanHeVoiSV);
             this.panel1.Location = new System.Drawing.Point(1, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(587, 271);
             this.panel1.TabIndex = 28;
@@ -138,11 +138,12 @@ namespace GUI
             // cb_gioiTinh
             // 
             this.cb_gioiTinh.BackColor = System.Drawing.Color.Transparent;
+            this.cb_gioiTinh.BorderRadius = 6;
             this.cb_gioiTinh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cb_gioiTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_gioiTinh.FocusedColor = System.Drawing.Color.Empty;
             this.cb_gioiTinh.FocusedState.Parent = this.cb_gioiTinh;
-            this.cb_gioiTinh.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cb_gioiTinh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cb_gioiTinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cb_gioiTinh.FormattingEnabled = true;
             this.cb_gioiTinh.HoverState.Parent = this.cb_gioiTinh;
@@ -152,7 +153,7 @@ namespace GUI
             "Nữ"});
             this.cb_gioiTinh.ItemsAppearance.Parent = this.cb_gioiTinh;
             this.cb_gioiTinh.Location = new System.Drawing.Point(200, 93);
-            this.cb_gioiTinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_gioiTinh.Margin = new System.Windows.Forms.Padding(4);
             this.cb_gioiTinh.Name = "cb_gioiTinh";
             this.cb_gioiTinh.ShadowDecoration.Parent = this.cb_gioiTinh;
             this.cb_gioiTinh.Size = new System.Drawing.Size(112, 36);
@@ -199,10 +200,10 @@ namespace GUI
             this.txb_diaChi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txb_diaChi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_diaChi.FocusedState.Parent = this.txb_diaChi;
-            this.txb_diaChi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txb_diaChi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txb_diaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_diaChi.HoverState.Parent = this.txb_diaChi;
-            this.txb_diaChi.Location = new System.Drawing.Point(200, 178);
+            this.txb_diaChi.Location = new System.Drawing.Point(200, 177);
             this.txb_diaChi.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txb_diaChi.Name = "txb_diaChi";
             this.txb_diaChi.PasswordChar = '\0';
@@ -226,7 +227,7 @@ namespace GUI
             this.txb_quanHeVoiSV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txb_quanHeVoiSV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_quanHeVoiSV.FocusedState.Parent = this.txb_quanHeVoiSV;
-            this.txb_quanHeVoiSV.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txb_quanHeVoiSV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txb_quanHeVoiSV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_quanHeVoiSV.HoverState.Parent = this.txb_quanHeVoiSV;
             this.txb_quanHeVoiSV.Location = new System.Drawing.Point(200, 139);
@@ -253,10 +254,10 @@ namespace GUI
             this.txb_hoTen.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txb_hoTen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_hoTen.FocusedState.Parent = this.txb_hoTen;
-            this.txb_hoTen.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txb_hoTen.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txb_hoTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_hoTen.HoverState.Parent = this.txb_hoTen;
-            this.txb_hoTen.Location = new System.Drawing.Point(200, 50);
+            this.txb_hoTen.Location = new System.Drawing.Point(200, 52);
             this.txb_hoTen.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txb_hoTen.Name = "txb_hoTen";
             this.txb_hoTen.PasswordChar = '\0';
@@ -280,10 +281,10 @@ namespace GUI
             this.txb_CMND.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txb_CMND.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_CMND.FocusedState.Parent = this.txb_CMND;
-            this.txb_CMND.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txb_CMND.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txb_CMND.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_CMND.HoverState.Parent = this.txb_CMND;
-            this.txb_CMND.Location = new System.Drawing.Point(200, 11);
+            this.txb_CMND.Location = new System.Drawing.Point(200, 12);
             this.txb_CMND.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txb_CMND.Name = "txb_CMND";
             this.txb_CMND.PasswordChar = '\0';
@@ -295,13 +296,14 @@ namespace GUI
             // 
             // btn_OK
             // 
+            this.btn_OK.BorderRadius = 6;
             this.btn_OK.CheckedState.Parent = this.btn_OK;
             this.btn_OK.CustomImages.Parent = this.btn_OK;
             this.btn_OK.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_OK.ForeColor = System.Drawing.Color.White;
             this.btn_OK.HoverState.Parent = this.btn_OK;
             this.btn_OK.Location = new System.Drawing.Point(147, 284);
-            this.btn_OK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_OK.Margin = new System.Windows.Forms.Padding(4);
             this.btn_OK.Name = "btn_OK";
             this.btn_OK.ShadowDecoration.Parent = this.btn_OK;
             this.btn_OK.Size = new System.Drawing.Size(109, 43);
@@ -311,13 +313,14 @@ namespace GUI
             // 
             // btn_huy
             // 
+            this.btn_huy.BorderRadius = 6;
             this.btn_huy.CheckedState.Parent = this.btn_huy;
             this.btn_huy.CustomImages.Parent = this.btn_huy;
             this.btn_huy.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_huy.ForeColor = System.Drawing.Color.White;
             this.btn_huy.HoverState.Parent = this.btn_huy;
             this.btn_huy.Location = new System.Drawing.Point(320, 284);
-            this.btn_huy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_huy.Margin = new System.Windows.Forms.Padding(4);
             this.btn_huy.Name = "btn_huy";
             this.btn_huy.ShadowDecoration.Parent = this.btn_huy;
             this.btn_huy.Size = new System.Drawing.Size(109, 43);
@@ -340,7 +343,7 @@ namespace GUI
             this.Controls.Add(this.btn_OK);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_ChiTietThanNhan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_ThanNhan2";

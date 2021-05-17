@@ -44,7 +44,6 @@ namespace GUI
             this.btn_huy = new Guna.UI2.WinForms.Guna2Button();
             this.btn_OK = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,18 +110,20 @@ namespace GUI
             this.panel1.Controls.Add(this.lb_ngayLap);
             this.panel1.Controls.Add(this.lb_ngayKetThuc);
             this.panel1.Location = new System.Drawing.Point(7, 9);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(484, 236);
             this.panel1.TabIndex = 33;
             // 
             // dtp_ngayLap
             // 
+            this.dtp_ngayLap.BorderRadius = 6;
             this.dtp_ngayLap.CheckedState.Parent = this.dtp_ngayLap;
-            this.dtp_ngayLap.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtp_ngayLap.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtp_ngayLap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_ngayLap.HoverState.Parent = this.dtp_ngayLap;
             this.dtp_ngayLap.Location = new System.Drawing.Point(181, 138);
-            this.dtp_ngayLap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_ngayLap.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_ngayLap.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtp_ngayLap.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtp_ngayLap.Name = "dtp_ngayLap";
@@ -133,11 +134,13 @@ namespace GUI
             // 
             // dtp_ngayKetThuc
             // 
+            this.dtp_ngayKetThuc.BorderRadius = 6;
             this.dtp_ngayKetThuc.CheckedState.Parent = this.dtp_ngayKetThuc;
-            this.dtp_ngayKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtp_ngayKetThuc.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtp_ngayKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_ngayKetThuc.HoverState.Parent = this.dtp_ngayKetThuc;
             this.dtp_ngayKetThuc.Location = new System.Drawing.Point(181, 94);
-            this.dtp_ngayKetThuc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_ngayKetThuc.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_ngayKetThuc.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtp_ngayKetThuc.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtp_ngayKetThuc.Name = "dtp_ngayKetThuc";
@@ -148,11 +151,13 @@ namespace GUI
             // 
             // dtp_ngayBatDau
             // 
+            this.dtp_ngayBatDau.BorderRadius = 6;
             this.dtp_ngayBatDau.CheckedState.Parent = this.dtp_ngayBatDau;
-            this.dtp_ngayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtp_ngayBatDau.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtp_ngayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_ngayBatDau.HoverState.Parent = this.dtp_ngayBatDau;
             this.dtp_ngayBatDau.Location = new System.Drawing.Point(181, 49);
-            this.dtp_ngayBatDau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_ngayBatDau.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_ngayBatDau.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtp_ngayBatDau.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtp_ngayBatDau.Name = "dtp_ngayBatDau";
@@ -175,7 +180,7 @@ namespace GUI
             this.txb_luongThang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txb_luongThang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_luongThang.FocusedState.Parent = this.txb_luongThang;
-            this.txb_luongThang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txb_luongThang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txb_luongThang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_luongThang.HoverState.Parent = this.txb_luongThang;
             this.txb_luongThang.Location = new System.Drawing.Point(181, 188);
@@ -202,7 +207,7 @@ namespace GUI
             this.txb_maHD.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txb_maHD.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_maHD.FocusedState.Parent = this.txb_maHD;
-            this.txb_maHD.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txb_maHD.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txb_maHD.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_maHD.HoverState.Parent = this.txb_maHD;
             this.txb_maHD.Location = new System.Drawing.Point(181, 11);
@@ -217,13 +222,14 @@ namespace GUI
             // 
             // btn_huy
             // 
+            this.btn_huy.BorderRadius = 6;
             this.btn_huy.CheckedState.Parent = this.btn_huy;
             this.btn_huy.CustomImages.Parent = this.btn_huy;
             this.btn_huy.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_huy.ForeColor = System.Drawing.Color.White;
             this.btn_huy.HoverState.Parent = this.btn_huy;
             this.btn_huy.Location = new System.Drawing.Point(283, 257);
-            this.btn_huy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_huy.Margin = new System.Windows.Forms.Padding(4);
             this.btn_huy.Name = "btn_huy";
             this.btn_huy.ShadowDecoration.Parent = this.btn_huy;
             this.btn_huy.Size = new System.Drawing.Size(109, 43);
@@ -233,13 +239,14 @@ namespace GUI
             // 
             // btn_OK
             // 
+            this.btn_OK.BorderRadius = 6;
             this.btn_OK.CheckedState.Parent = this.btn_OK;
             this.btn_OK.CustomImages.Parent = this.btn_OK;
             this.btn_OK.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_OK.ForeColor = System.Drawing.Color.White;
             this.btn_OK.HoverState.Parent = this.btn_OK;
             this.btn_OK.Location = new System.Drawing.Point(92, 257);
-            this.btn_OK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_OK.Margin = new System.Windows.Forms.Padding(4);
             this.btn_OK.Name = "btn_OK";
             this.btn_OK.ShadowDecoration.Parent = this.btn_OK;
             this.btn_OK.Size = new System.Drawing.Size(109, 43);
@@ -249,12 +256,7 @@ namespace GUI
             // 
             // guna2Elipse1
             // 
-            this.guna2Elipse1.BorderRadius = 5;
-            this.guna2Elipse1.TargetControl = this.btn_OK;
-            // 
-            // guna2Elipse2
-            // 
-            this.guna2Elipse2.TargetControl = this.btn_huy;
+            this.guna2Elipse1.TargetControl = this;
             // 
             // frm_ChiTietHDNV
             // 
@@ -269,7 +271,7 @@ namespace GUI
             this.Controls.Add(this.btn_OK);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_ChiTietHDNV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi tiết HDNV";
@@ -296,6 +298,5 @@ namespace GUI
         private Guna.UI2.WinForms.Guna2Button btn_huy;
         private Guna.UI2.WinForms.Guna2Button btn_OK;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
     }
 }

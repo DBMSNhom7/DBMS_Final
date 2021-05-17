@@ -91,7 +91,31 @@ namespace GUI
             LoadData();
         }
 
-        
+        private void dgv_sinhVien_TheoPhong_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string maSV =
+                dgv_sinhVien_TheoPhong.Rows[dgv_sinhVien_TheoPhong.CurrentCell.RowIndex].Cells[0].Value.ToString();
+
+            try
+            {
+                SinhVienDTO sv = new SinhVienDTO();
+                sv = _sinhVienBLL.laySinhVien_TheoMaSV(maSV);
+
+                txb_maSV.Text = sv.MaSV;
+                txb_CMND.Text = sv.CMND;
+                txb_hoTen.Text = sv.HoTen;
+                cb_gioiTinh.Text = sv.GioiTinh;
+                dtp_ngaySinh.Value = DateTime.Parse(sv.NgaySinh);
+                txb_diaChi.Text = sv.DiaChi;
+                txb_dienThoai.Text = sv.DienThoai;
+                txb_CMNDTN.Text = sv.CMNDTN;
+                txb_maHD.Text = sv.MaHD;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
         private void btn_chiTietTN_Click(object sender, EventArgs e)
         {
@@ -297,29 +321,28 @@ namespace GUI
             }
         }
 
-        private void dgv_sinhVien_TheoPhong_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        private void buttonXuatExcel_Click(object sender, EventArgs e)
         {
-            string maSV =
-                dgv_sinhVien_TheoPhong.Rows[dgv_sinhVien_TheoPhong.CurrentCell.RowIndex].Cells[0].Value.ToString();
-
-            try
+            if (dgv_sinhVien_TheoPhong.Rows.Count > 0)
             {
-                SinhVienDTO sv = new SinhVienDTO();
-                sv = _sinhVienBLL.laySinhVien_TheoMaSV(maSV);
 
-                txb_maSV.Text = sv.MaSV;
-                txb_CMND.Text = sv.CMND;
-                txb_hoTen.Text = sv.HoTen;
-                cb_gioiTinh.Text = sv.GioiTinh;
-                dtp_ngaySinh.Value = DateTime.Parse(sv.NgaySinh);
-                txb_diaChi.Text = sv.DiaChi;
-                txb_dienThoai.Text = sv.DienThoai;
-                txb_CMNDTN.Text = sv.CMNDTN;
-                txb_maHD.Text = sv.MaHD;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                Microsoft.Office.Interop.Excel.Application xcelApp = new Microsoft.Office.Interop.Excel.Application();
+                xcelApp.Application.Workbooks.Add(Type.Missing);
+
+                for (int i = 1; i < dgv_sinhVien_TheoPhong.Columns.Count + 1; i++)
+                {
+                    xcelApp.Cells[1, i] = dgv_sinhVien_TheoPhong.Columns[i - 1].HeaderText;
+                }
+
+                for (int i = 0; i < dgv_sinhVien_TheoPhong.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dgv_sinhVien_TheoPhong.Columns.Count; j++)
+                    {
+                        xcelApp.Cells[i + 2, j + 1] = dgv_sinhVien_TheoPhong.Rows[i].Cells[j].Value.ToString();
+                    }
+                }
+                xcelApp.Columns.AutoFit();
+                xcelApp.Visible = true;
             }
         }
     }

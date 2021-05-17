@@ -8,19 +8,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
 
 namespace GUI
 {
     public partial class frm_TrangChu : Form
     {
-        public frm_TrangChu()
+        public frm_TrangChu(TaiKhoanDTO tk)
         {
             InitializeComponent();
+            lb_tenTK.Text = tk.TenTaiKhoan;
+            lb_loaiTK.Text = tk.TenLoaiQuyen;
         }
 
         private void container(object _form)
         {
-
             if (pnl_container.Controls.Count > 0) pnl_container.Controls.Clear();
 
             Form fm = _form as Form;
@@ -30,7 +32,6 @@ namespace GUI
             pnl_container.Controls.Add(fm);
             pnl_container.Tag = fm;
             fm.Show();
-
         }
 
         private void frm_TrangChu_Load(object sender, EventArgs e)

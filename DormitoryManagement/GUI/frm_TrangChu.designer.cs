@@ -33,8 +33,8 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_dangXuat = new Guna.UI2.WinForms.Guna2Button();
             this.btn_qlTaiKhoan = new Guna.UI2.WinForms.Guna2Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lb_loaiTK = new System.Windows.Forms.Label();
+            this.lb_tenTK = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
@@ -46,6 +46,7 @@
             this.btn_tongQuan = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel_top = new Guna.UI2.WinForms.Guna2Panel();
+            this.lb_tieuDe = new System.Windows.Forms.Label();
             this.label_val = new System.Windows.Forms.Label();
             this.guna2PictureBox_val = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -54,7 +55,6 @@
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.pnl_container = new Guna.UI2.WinForms.Guna2Panel();
-            this.lb_tieuDe = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -68,8 +68,8 @@
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
             this.guna2Panel1.Controls.Add(this.btn_dangXuat);
             this.guna2Panel1.Controls.Add(this.btn_qlTaiKhoan);
-            this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Controls.Add(this.lb_loaiTK);
+            this.guna2Panel1.Controls.Add(this.lb_tenTK);
             this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox1);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox2);
             this.guna2Panel1.Controls.Add(this.guna2Button7);
@@ -100,7 +100,6 @@
             this.btn_dangXuat.HoverState.BorderColor = System.Drawing.Color.Navy;
             this.btn_dangXuat.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(83)))), ((int)(((byte)(251)))));
             this.btn_dangXuat.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btn_dangXuat.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("btn_dangXuat.HoverState.Image")));
             this.btn_dangXuat.HoverState.Parent = this.btn_dangXuat;
             this.btn_dangXuat.Image = global::GUI.Properties.Resources.icons8_exit_96px;
             this.btn_dangXuat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -126,7 +125,6 @@
             this.btn_qlTaiKhoan.HoverState.BorderColor = System.Drawing.Color.Navy;
             this.btn_qlTaiKhoan.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(83)))), ((int)(((byte)(251)))));
             this.btn_qlTaiKhoan.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btn_qlTaiKhoan.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("btn_qlTaiKhoan.HoverState.Image")));
             this.btn_qlTaiKhoan.HoverState.Parent = this.btn_qlTaiKhoan;
             this.btn_qlTaiKhoan.Image = global::GUI.Properties.Resources.icons8_user_shield_96px;
             this.btn_qlTaiKhoan.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -143,31 +141,31 @@
             this.btn_qlTaiKhoan.TextOffset = new System.Drawing.Point(8, 0);
             this.btn_qlTaiKhoan.Click += new System.EventHandler(this.btn_qlTaiKhoan_Click);
             // 
-            // label2
+            // lb_loaiTK
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(80, 895);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 17);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Admin";
+            this.lb_loaiTK.AutoSize = true;
+            this.lb_loaiTK.ForeColor = System.Drawing.Color.Gray;
+            this.lb_loaiTK.Location = new System.Drawing.Point(80, 893);
+            this.lb_loaiTK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_loaiTK.Name = "lb_loaiTK";
+            this.lb_loaiTK.Size = new System.Drawing.Size(47, 17);
+            this.lb_loaiTK.TabIndex = 11;
+            this.lb_loaiTK.Text = "Admin";
             // 
-            // label1
+            // lb_tenTK
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(80, 873);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 17);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Nguyễn Hoàng Nhật";
+            this.lb_tenTK.AutoSize = true;
+            this.lb_tenTK.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_tenTK.Location = new System.Drawing.Point(80, 871);
+            this.lb_tenTK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_tenTK.Name = "lb_tenTK";
+            this.lb_tenTK.Size = new System.Drawing.Size(136, 17);
+            this.lb_tenTK.TabIndex = 10;
+            this.lb_tenTK.Text = "Nguyễn Hoàng Nhật";
             // 
             // guna2CirclePictureBox1
             // 
-            this.guna2CirclePictureBox1.Image = global::GUI.Properties.Resources.avt;
+            this.guna2CirclePictureBox1.Image = global::GUI.Properties.Resources.avt1;
             this.guna2CirclePictureBox1.Location = new System.Drawing.Point(25, 868);
             this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
@@ -180,7 +178,6 @@
             // 
             // guna2PictureBox2
             // 
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.Location = new System.Drawing.Point(223, 20);
             this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
@@ -201,7 +198,6 @@
             this.guna2Button7.HoverState.BorderColor = System.Drawing.Color.Navy;
             this.guna2Button7.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(83)))), ((int)(((byte)(251)))));
             this.guna2Button7.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button7.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button7.HoverState.Image")));
             this.guna2Button7.HoverState.Parent = this.guna2Button7;
             this.guna2Button7.Image = global::GUI.Properties.Resources.icons8_help_96px;
             this.guna2Button7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -226,7 +222,6 @@
             this.btn_qlKTKL.HoverState.BorderColor = System.Drawing.Color.Navy;
             this.btn_qlKTKL.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(83)))), ((int)(((byte)(251)))));
             this.btn_qlKTKL.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btn_qlKTKL.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("btn_qlKTKL.HoverState.Image")));
             this.btn_qlKTKL.HoverState.Parent = this.btn_qlKTKL;
             this.btn_qlKTKL.Image = global::GUI.Properties.Resources.icons8_certificate_100px;
             this.btn_qlKTKL.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -254,7 +249,6 @@
             this.btn_qlDienNuoc.HoverState.BorderColor = System.Drawing.Color.Navy;
             this.btn_qlDienNuoc.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(83)))), ((int)(((byte)(251)))));
             this.btn_qlDienNuoc.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btn_qlDienNuoc.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("btn_qlDienNuoc.HoverState.Image")));
             this.btn_qlDienNuoc.HoverState.Parent = this.btn_qlDienNuoc;
             this.btn_qlDienNuoc.Image = global::GUI.Properties.Resources.icons8_water_100px;
             this.btn_qlDienNuoc.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -282,7 +276,6 @@
             this.btn_qlPhong.HoverState.BorderColor = System.Drawing.Color.Navy;
             this.btn_qlPhong.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(83)))), ((int)(((byte)(251)))));
             this.btn_qlPhong.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btn_qlPhong.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("btn_qlPhong.HoverState.Image")));
             this.btn_qlPhong.HoverState.Parent = this.btn_qlPhong;
             this.btn_qlPhong.Image = global::GUI.Properties.Resources.icons8_room_80px;
             this.btn_qlPhong.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -310,7 +303,6 @@
             this.btn_qlNhanVien.HoverState.BorderColor = System.Drawing.Color.Navy;
             this.btn_qlNhanVien.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(83)))), ((int)(((byte)(251)))));
             this.btn_qlNhanVien.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btn_qlNhanVien.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("btn_qlNhanVien.HoverState.Image")));
             this.btn_qlNhanVien.HoverState.Parent = this.btn_qlNhanVien;
             this.btn_qlNhanVien.Image = global::GUI.Properties.Resources.icons8_gender_neutral_employee_group_200px;
             this.btn_qlNhanVien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -338,7 +330,6 @@
             this.btn_qlSinhVien.HoverState.BorderColor = System.Drawing.Color.Navy;
             this.btn_qlSinhVien.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(83)))), ((int)(((byte)(251)))));
             this.btn_qlSinhVien.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btn_qlSinhVien.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("btn_qlSinhVien.HoverState.Image")));
             this.btn_qlSinhVien.HoverState.Parent = this.btn_qlSinhVien;
             this.btn_qlSinhVien.Image = global::GUI.Properties.Resources.icons8_student_male_100px;
             this.btn_qlSinhVien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -366,7 +357,6 @@
             this.btn_tongQuan.HoverState.BorderColor = System.Drawing.Color.Navy;
             this.btn_tongQuan.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(83)))), ((int)(((byte)(251)))));
             this.btn_tongQuan.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btn_tongQuan.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("btn_tongQuan.HoverState.Image")));
             this.btn_tongQuan.HoverState.Parent = this.btn_tongQuan;
             this.btn_tongQuan.Image = global::GUI.Properties.Resources.icons8_overview_96px;
             this.btn_tongQuan.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -413,6 +403,16 @@
             this.guna2Panel_top.ShadowDecoration.Parent = this.guna2Panel_top;
             this.guna2Panel_top.Size = new System.Drawing.Size(1338, 65);
             this.guna2Panel_top.TabIndex = 1;
+            // 
+            // lb_tieuDe
+            // 
+            this.lb_tieuDe.AutoSize = true;
+            this.lb_tieuDe.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_tieuDe.Location = new System.Drawing.Point(632, 16);
+            this.lb_tieuDe.Name = "lb_tieuDe";
+            this.lb_tieuDe.Size = new System.Drawing.Size(353, 32);
+            this.lb_tieuDe.TabIndex = 32;
+            this.lb_tieuDe.Text = "Phần Mềm Quản Lý Ký Túc Xá";
             // 
             // label_val
             // 
@@ -490,16 +490,6 @@
             this.pnl_container.Size = new System.Drawing.Size(1338, 863);
             this.pnl_container.TabIndex = 2;
             // 
-            // lb_tieuDe
-            // 
-            this.lb_tieuDe.AutoSize = true;
-            this.lb_tieuDe.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_tieuDe.Location = new System.Drawing.Point(632, 16);
-            this.lb_tieuDe.Name = "lb_tieuDe";
-            this.lb_tieuDe.Size = new System.Drawing.Size(353, 32);
-            this.lb_tieuDe.TabIndex = 32;
-            this.lb_tieuDe.Text = "Phần Mềm Quản Lý Ký Túc Xá";
-            // 
             // frm_TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -547,8 +537,8 @@
         private Guna.UI2.WinForms.Guna2Button btn_qlPhong;
         private Guna.UI2.WinForms.Guna2Button btn_qlNhanVien;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lb_loaiTK;
+        private System.Windows.Forms.Label lb_tenTK;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2Panel pnl_container;
         private System.Windows.Forms.Label label_val;
