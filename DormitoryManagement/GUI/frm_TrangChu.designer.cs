@@ -54,6 +54,7 @@
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.pnl_container = new Guna.UI2.WinForms.Guna2Panel();
+            this.lb_tieuDe = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -397,6 +398,7 @@
             // 
             // guna2Panel_top
             // 
+            this.guna2Panel_top.Controls.Add(this.lb_tieuDe);
             this.guna2Panel_top.Controls.Add(this.label_val);
             this.guna2Panel_top.Controls.Add(this.guna2PictureBox_val);
             this.guna2Panel_top.Controls.Add(this.guna2ControlBox3);
@@ -415,11 +417,11 @@
             // label_val
             // 
             this.label_val.AutoSize = true;
-            this.label_val.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
+            this.label_val.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label_val.Location = new System.Drawing.Point(95, 17);
             this.label_val.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_val.Name = "label_val";
-            this.label_val.Size = new System.Drawing.Size(0, 25);
+            this.label_val.Size = new System.Drawing.Size(0, 28);
             this.label_val.TabIndex = 5;
             // 
             // guna2PictureBox_val
@@ -488,6 +490,16 @@
             this.pnl_container.Size = new System.Drawing.Size(1338, 863);
             this.pnl_container.TabIndex = 2;
             // 
+            // lb_tieuDe
+            // 
+            this.lb_tieuDe.AutoSize = true;
+            this.lb_tieuDe.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_tieuDe.Location = new System.Drawing.Point(632, 16);
+            this.lb_tieuDe.Name = "lb_tieuDe";
+            this.lb_tieuDe.Size = new System.Drawing.Size(353, 32);
+            this.lb_tieuDe.TabIndex = 32;
+            this.lb_tieuDe.Text = "Phần Mềm Quản Lý Ký Túc Xá";
+            // 
             // frm_TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -543,5 +555,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox_val;
         private Guna.UI2.WinForms.Guna2Button btn_qlTaiKhoan;
         private Guna.UI2.WinForms.Guna2Button btn_dangXuat;
+        private System.Windows.Forms.Label lb_tieuDe;
     }
 }

@@ -71,7 +71,7 @@ namespace GUI
             }
         }
 
-        private void frm_SinhVien2_Load(object sender, EventArgs e)
+        private void frm_SinhVien_Load(object sender, EventArgs e)
         {
             LoadData();
         }
@@ -336,7 +336,7 @@ namespace GUI
             }
         }
 
-        private void dgv_sinhVien_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        private void dgv_sinhVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string maSV = dgv_sinhVien.Rows[dgv_sinhVien.CurrentCell.RowIndex].Cells[0].Value.ToString();
 

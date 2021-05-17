@@ -85,7 +85,14 @@ namespace DAL
 
         public int layTongSoSinhVien()
         {
-            return (int)db.ExecuteScalar("spLayTongSoSinhVien", CommandType.StoredProcedure);
+            try
+            {
+                return (int)db.ExecuteScalar("spLayTongSoSinhVien", CommandType.StoredProcedure);
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
         }
     }
 }

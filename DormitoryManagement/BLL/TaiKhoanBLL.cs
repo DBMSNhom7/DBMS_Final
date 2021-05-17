@@ -17,5 +17,15 @@ namespace BLL
         {
             _taiKhoanDAL = new TaiKhoanDAL();
         }
+
+        public bool dangNhap(string taiKhoan, string matKhau)
+        {
+            return _taiKhoanDAL.dangNhap(taiKhoan, matKhau);
+        }
+
+        public TaiKhoanDTO layTaiKhoan_TheoTenTK(string taiKhoan)
+        {
+            return new TaiKhoanDTO(_taiKhoanDAL.layTaiKhoan_TheoTenTK(taiKhoan).Rows[0]);
+        }
     }
 }

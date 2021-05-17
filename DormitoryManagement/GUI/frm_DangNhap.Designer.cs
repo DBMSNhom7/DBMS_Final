@@ -35,6 +35,7 @@ namespace GUI
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lb_tieuDe = new System.Windows.Forms.Label();
             this.btn_thoat = new Guna.UI2.WinForms.Guna2Button();
             this.btn_dangNhap = new Guna.UI2.WinForms.Guna2Button();
             this.lb_rememberMe = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@ namespace GUI
             this.txb_matKhau = new Guna.UI2.WinForms.Guna2TextBox();
             this.txb_taiKhoan = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.lb_tieuDe = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -98,6 +98,16 @@ namespace GUI
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(617, 747);
             this.panel2.TabIndex = 2;
+            // 
+            // lb_tieuDe
+            // 
+            this.lb_tieuDe.AutoSize = true;
+            this.lb_tieuDe.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_tieuDe.Location = new System.Drawing.Point(117, 19);
+            this.lb_tieuDe.Name = "lb_tieuDe";
+            this.lb_tieuDe.Size = new System.Drawing.Size(353, 32);
+            this.lb_tieuDe.TabIndex = 31;
+            this.lb_tieuDe.Text = "Phần Mềm Quản Lý Ký Túc Xá";
             // 
             // btn_thoat
             // 
@@ -238,18 +248,9 @@ namespace GUI
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
-            // lb_tieuDe
-            // 
-            this.lb_tieuDe.AutoSize = true;
-            this.lb_tieuDe.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_tieuDe.Location = new System.Drawing.Point(117, 19);
-            this.lb_tieuDe.Name = "lb_tieuDe";
-            this.lb_tieuDe.Size = new System.Drawing.Size(353, 32);
-            this.lb_tieuDe.TabIndex = 31;
-            this.lb_tieuDe.Text = "Phần Mềm Quản Lý Ký Túc Xá";
-            // 
             // frm_DangNhap
             // 
+            this.AcceptButton = this.btn_dangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1387, 747);

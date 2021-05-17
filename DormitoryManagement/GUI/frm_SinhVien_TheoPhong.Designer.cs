@@ -33,6 +33,7 @@ namespace GUI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_maHD = new Guna.UI2.WinForms.Guna2Button();
@@ -62,15 +63,15 @@ namespace GUI
             this.btn_xoa = new Guna.UI2.WinForms.Guna2Button();
             this.btn_luu = new Guna.UI2.WinForms.Guna2Button();
             this.btn_huy = new Guna.UI2.WinForms.Guna2Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.dgv_sinhVien_TheoPhong = new Guna.UI2.WinForms.Guna2DataGridView();
             this.MaSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_sinhVien_TheoPhong)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_sinhVien_TheoPhong)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -101,7 +102,7 @@ namespace GUI
             this.panel3.Controls.Add(this.lb_CMND);
             this.panel3.Controls.Add(this.lb_maSV);
             this.panel3.Location = new System.Drawing.Point(4, 4);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(468, 476);
             this.panel3.TabIndex = 2;
@@ -114,7 +115,7 @@ namespace GUI
             this.btn_maHD.ForeColor = System.Drawing.Color.White;
             this.btn_maHD.HoverState.Parent = this.btn_maHD;
             this.btn_maHD.Location = new System.Drawing.Point(391, 379);
-            this.btn_maHD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_maHD.Margin = new System.Windows.Forms.Padding(4);
             this.btn_maHD.Name = "btn_maHD";
             this.btn_maHD.ShadowDecoration.Parent = this.btn_maHD;
             this.btn_maHD.Size = new System.Drawing.Size(61, 31);
@@ -130,7 +131,7 @@ namespace GUI
             this.btn_chiTietTN.ForeColor = System.Drawing.Color.White;
             this.btn_chiTietTN.HoverState.Parent = this.btn_chiTietTN;
             this.btn_chiTietTN.Location = new System.Drawing.Point(391, 332);
-            this.btn_chiTietTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_chiTietTN.Margin = new System.Windows.Forms.Padding(4);
             this.btn_chiTietTN.Name = "btn_chiTietTN";
             this.btn_chiTietTN.ShadowDecoration.Parent = this.btn_chiTietTN;
             this.btn_chiTietTN.Size = new System.Drawing.Size(61, 31);
@@ -146,7 +147,7 @@ namespace GUI
             this.btn_KTKL.ForeColor = System.Drawing.Color.White;
             this.btn_KTKL.HoverState.Parent = this.btn_KTKL;
             this.btn_KTKL.Location = new System.Drawing.Point(263, 417);
-            this.btn_KTKL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_KTKL.Margin = new System.Windows.Forms.Padding(4);
             this.btn_KTKL.Name = "btn_KTKL";
             this.btn_KTKL.ShadowDecoration.Parent = this.btn_KTKL;
             this.btn_KTKL.Size = new System.Drawing.Size(189, 34);
@@ -349,7 +350,7 @@ namespace GUI
             this.dtp_ngaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_ngaySinh.HoverState.Parent = this.dtp_ngaySinh;
             this.dtp_ngaySinh.Location = new System.Drawing.Point(156, 209);
-            this.dtp_ngaySinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_ngaySinh.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_ngaySinh.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtp_ngaySinh.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtp_ngaySinh.Name = "dtp_ngaySinh";
@@ -375,7 +376,7 @@ namespace GUI
             "Nữ"});
             this.cb_gioiTinh.ItemsAppearance.Parent = this.cb_gioiTinh;
             this.cb_gioiTinh.Location = new System.Drawing.Point(156, 158);
-            this.cb_gioiTinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_gioiTinh.Margin = new System.Windows.Forms.Padding(4);
             this.cb_gioiTinh.Name = "cb_gioiTinh";
             this.cb_gioiTinh.ShadowDecoration.Parent = this.cb_gioiTinh;
             this.cb_gioiTinh.Size = new System.Drawing.Size(151, 36);
@@ -491,7 +492,7 @@ namespace GUI
             this.panel2.Controls.Add(this.btn_huy);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(479, 796);
             this.panel2.TabIndex = 7;
@@ -504,7 +505,7 @@ namespace GUI
             this.btn_them.ForeColor = System.Drawing.Color.White;
             this.btn_them.HoverState.Parent = this.btn_them;
             this.btn_them.Location = new System.Drawing.Point(32, 487);
-            this.btn_them.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_them.Margin = new System.Windows.Forms.Padding(4);
             this.btn_them.Name = "btn_them";
             this.btn_them.ShadowDecoration.Parent = this.btn_them;
             this.btn_them.Size = new System.Drawing.Size(109, 43);
@@ -520,7 +521,7 @@ namespace GUI
             this.btn_sua.ForeColor = System.Drawing.Color.White;
             this.btn_sua.HoverState.Parent = this.btn_sua;
             this.btn_sua.Location = new System.Drawing.Point(149, 487);
-            this.btn_sua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_sua.Margin = new System.Windows.Forms.Padding(4);
             this.btn_sua.Name = "btn_sua";
             this.btn_sua.ShadowDecoration.Parent = this.btn_sua;
             this.btn_sua.Size = new System.Drawing.Size(109, 43);
@@ -536,7 +537,7 @@ namespace GUI
             this.btn_xoa.ForeColor = System.Drawing.Color.White;
             this.btn_xoa.HoverState.Parent = this.btn_xoa;
             this.btn_xoa.Location = new System.Drawing.Point(267, 487);
-            this.btn_xoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_xoa.Margin = new System.Windows.Forms.Padding(4);
             this.btn_xoa.Name = "btn_xoa";
             this.btn_xoa.ShadowDecoration.Parent = this.btn_xoa;
             this.btn_xoa.Size = new System.Drawing.Size(109, 43);
@@ -552,7 +553,7 @@ namespace GUI
             this.btn_luu.ForeColor = System.Drawing.Color.White;
             this.btn_luu.HoverState.Parent = this.btn_luu;
             this.btn_luu.Location = new System.Drawing.Point(267, 538);
-            this.btn_luu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_luu.Margin = new System.Windows.Forms.Padding(4);
             this.btn_luu.Name = "btn_luu";
             this.btn_luu.ShadowDecoration.Parent = this.btn_luu;
             this.btn_luu.Size = new System.Drawing.Size(109, 43);
@@ -568,7 +569,7 @@ namespace GUI
             this.btn_huy.ForeColor = System.Drawing.Color.White;
             this.btn_huy.HoverState.Parent = this.btn_huy;
             this.btn_huy.Location = new System.Drawing.Point(149, 538);
-            this.btn_huy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_huy.Margin = new System.Windows.Forms.Padding(4);
             this.btn_huy.Name = "btn_huy";
             this.btn_huy.ShadowDecoration.Parent = this.btn_huy;
             this.btn_huy.Size = new System.Drawing.Size(109, 43);
@@ -576,70 +577,94 @@ namespace GUI
             this.btn_huy.Text = "Huỷ";
             this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dgv_sinhVien_TheoPhong);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(500, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(865, 796);
+            this.panel1.TabIndex = 6;
+            // 
             // dgv_sinhVien_TheoPhong
             // 
+            this.dgv_sinhVien_TheoPhong.AllowUserToAddRows = false;
+            this.dgv_sinhVien_TheoPhong.AllowUserToDeleteRows = false;
+            this.dgv_sinhVien_TheoPhong.AllowUserToResizeColumns = false;
+            this.dgv_sinhVien_TheoPhong.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgv_sinhVien_TheoPhong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_sinhVien_TheoPhong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_sinhVien_TheoPhong.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.dgv_sinhVien_TheoPhong.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.dgv_sinhVien_TheoPhong.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_sinhVien_TheoPhong.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_sinhVien_TheoPhong.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_sinhVien_TheoPhong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_sinhVien_TheoPhong.ColumnHeadersHeight = 21;
+            this.dgv_sinhVien_TheoPhong.ColumnHeadersHeight = 40;
             this.dgv_sinhVien_TheoPhong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaSV,
             this.HoTen,
             this.DienThoai});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_sinhVien_TheoPhong.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_sinhVien_TheoPhong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_sinhVien_TheoPhong.EnableHeadersVisualStyles = false;
-            this.dgv_sinhVien_TheoPhong.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_sinhVien_TheoPhong.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.dgv_sinhVien_TheoPhong.Location = new System.Drawing.Point(0, 0);
-            this.dgv_sinhVien_TheoPhong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_sinhVien_TheoPhong.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_sinhVien_TheoPhong.Name = "dgv_sinhVien_TheoPhong";
+            this.dgv_sinhVien_TheoPhong.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_sinhVien_TheoPhong.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_sinhVien_TheoPhong.RowHeadersVisible = false;
             this.dgv_sinhVien_TheoPhong.RowHeadersWidth = 51;
+            this.dgv_sinhVien_TheoPhong.RowTemplate.DividerHeight = 5;
+            this.dgv_sinhVien_TheoPhong.RowTemplate.Height = 40;
             this.dgv_sinhVien_TheoPhong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_sinhVien_TheoPhong.Size = new System.Drawing.Size(865, 796);
-            this.dgv_sinhVien_TheoPhong.TabIndex = 0;
+            this.dgv_sinhVien_TheoPhong.TabIndex = 8;
             this.dgv_sinhVien_TheoPhong.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dgv_sinhVien_TheoPhong.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_sinhVien_TheoPhong.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.dgv_sinhVien_TheoPhong.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgv_sinhVien_TheoPhong.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgv_sinhVien_TheoPhong.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgv_sinhVien_TheoPhong.ThemeStyle.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.dgv_sinhVien_TheoPhong.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_sinhVien_TheoPhong.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgv_sinhVien_TheoPhong.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.dgv_sinhVien_TheoPhong.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.dgv_sinhVien_TheoPhong.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.dgv_sinhVien_TheoPhong.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_sinhVien_TheoPhong.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.dgv_sinhVien_TheoPhong.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgv_sinhVien_TheoPhong.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_sinhVien_TheoPhong.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.DimGray;
             this.dgv_sinhVien_TheoPhong.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgv_sinhVien_TheoPhong.ThemeStyle.HeaderStyle.Height = 21;
-            this.dgv_sinhVien_TheoPhong.ThemeStyle.ReadOnly = false;
+            this.dgv_sinhVien_TheoPhong.ThemeStyle.HeaderStyle.Height = 40;
+            this.dgv_sinhVien_TheoPhong.ThemeStyle.ReadOnly = true;
             this.dgv_sinhVien_TheoPhong.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_sinhVien_TheoPhong.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_sinhVien_TheoPhong.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.dgv_sinhVien_TheoPhong.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgv_sinhVien_TheoPhong.ThemeStyle.RowsStyle.Height = 22;
-            this.dgv_sinhVien_TheoPhong.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_sinhVien_TheoPhong.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgv_sinhVien_TheoPhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_sinhVien_TheoPhong_CellClick_1);
+            this.dgv_sinhVien_TheoPhong.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_sinhVien_TheoPhong.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
+            this.dgv_sinhVien_TheoPhong.ThemeStyle.RowsStyle.Height = 40;
+            this.dgv_sinhVien_TheoPhong.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.dgv_sinhVien_TheoPhong.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             // 
             // MaSV
             // 
@@ -647,32 +672,27 @@ namespace GUI
             this.MaSV.HeaderText = "Mã SV";
             this.MaSV.MinimumWidth = 6;
             this.MaSV.Name = "MaSV";
+            this.MaSV.ReadOnly = true;
             // 
             // HoTen
             // 
             this.HoTen.DataPropertyName = "HoTen";
+            this.HoTen.FillWeight = 84.83527F;
             this.HoTen.HeaderText = "Họ Tên";
             this.HoTen.MinimumWidth = 6;
             this.HoTen.Name = "HoTen";
+            this.HoTen.ReadOnly = true;
             // 
             // DienThoai
             // 
             this.DienThoai.DataPropertyName = "DienThoai";
+            this.DienThoai.FillWeight = 87.33154F;
             this.DienThoai.HeaderText = "Điện Thoại";
             this.DienThoai.MinimumWidth = 6;
             this.DienThoai.Name = "DienThoai";
+            this.DienThoai.ReadOnly = true;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.dgv_sinhVien_TheoPhong);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(500, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(865, 796);
-            this.panel1.TabIndex = 6;
-            // 
-            // frm_SinhVien_TheoPhong2
+            // frm_SinhVien_TheoPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -680,16 +700,16 @@ namespace GUI
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "frm_SinhVien_TheoPhong2";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "frm_SinhVien_TheoPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_SinhVien_TheoPhong2";
             this.Load += new System.EventHandler(this.frm_SinhVien_TheoPhong2_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_sinhVien_TheoPhong)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_sinhVien_TheoPhong)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -704,7 +724,6 @@ namespace GUI
         private Guna.UI2.WinForms.Guna2Button btn_xoa;
         private Guna.UI2.WinForms.Guna2Button btn_luu;
         private Guna.UI2.WinForms.Guna2Button btn_huy;
-        private Guna.UI2.WinForms.Guna2DataGridView dgv_sinhVien_TheoPhong;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lb_maHD;
         private System.Windows.Forms.Label lb_hoTenTN;
@@ -727,6 +746,7 @@ namespace GUI
         private Guna.UI2.WinForms.Guna2Button btn_KTKL;
         private Guna.UI2.WinForms.Guna2Button btn_maHD;
         private Guna.UI2.WinForms.Guna2Button btn_chiTietTN;
+        private Guna.UI2.WinForms.Guna2DataGridView dgv_sinhVien_TheoPhong;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSV;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn DienThoai;

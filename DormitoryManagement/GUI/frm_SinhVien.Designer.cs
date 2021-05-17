@@ -93,7 +93,7 @@ namespace GUI
             this.panel1.Controls.Add(this.dgv_sinhVien);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(439, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(865, 683);
             this.panel1.TabIndex = 0;
@@ -112,7 +112,7 @@ namespace GUI
             this.buttonXuatExcel.Image = global::GUI.Properties.Resources.icons8_xls_export_160px;
             this.buttonXuatExcel.ImageSize = new System.Drawing.Size(40, 40);
             this.buttonXuatExcel.Location = new System.Drawing.Point(0, 625);
-            this.buttonXuatExcel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonXuatExcel.Margin = new System.Windows.Forms.Padding(4);
             this.buttonXuatExcel.Name = "buttonXuatExcel";
             this.buttonXuatExcel.ShadowDecoration.Parent = this.buttonXuatExcel;
             this.buttonXuatExcel.Size = new System.Drawing.Size(865, 58);
@@ -123,6 +123,7 @@ namespace GUI
             // dgv_sinhVien
             // 
             this.dgv_sinhVien.AllowUserToAddRows = false;
+            this.dgv_sinhVien.AllowUserToDeleteRows = false;
             this.dgv_sinhVien.AllowUserToResizeColumns = false;
             this.dgv_sinhVien.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
@@ -160,7 +161,7 @@ namespace GUI
             this.dgv_sinhVien.EnableHeadersVisualStyles = false;
             this.dgv_sinhVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.dgv_sinhVien.Location = new System.Drawing.Point(0, 0);
-            this.dgv_sinhVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_sinhVien.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_sinhVien.Name = "dgv_sinhVien";
             this.dgv_sinhVien.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -200,7 +201,7 @@ namespace GUI
             this.dgv_sinhVien.ThemeStyle.RowsStyle.Height = 40;
             this.dgv_sinhVien.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.dgv_sinhVien.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dgv_sinhVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_sinhVien_CellClick_1);
+            this.dgv_sinhVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_sinhVien_CellClick);
             // 
             // MaSV
             // 
@@ -266,7 +267,7 @@ namespace GUI
             this.flowLayoutPanel1.Controls.Add(this.btn_luu);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 577);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(439, 106);
             this.flowLayoutPanel1.TabIndex = 1;
@@ -279,7 +280,7 @@ namespace GUI
             this.btn_them.ForeColor = System.Drawing.Color.White;
             this.btn_them.HoverState.Parent = this.btn_them;
             this.btn_them.Location = new System.Drawing.Point(4, 4);
-            this.btn_them.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_them.Margin = new System.Windows.Forms.Padding(4);
             this.btn_them.Name = "btn_them";
             this.btn_them.ShadowDecoration.Parent = this.btn_them;
             this.btn_them.Size = new System.Drawing.Size(109, 43);
@@ -295,7 +296,7 @@ namespace GUI
             this.btn_sua.ForeColor = System.Drawing.Color.White;
             this.btn_sua.HoverState.Parent = this.btn_sua;
             this.btn_sua.Location = new System.Drawing.Point(121, 4);
-            this.btn_sua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_sua.Margin = new System.Windows.Forms.Padding(4);
             this.btn_sua.Name = "btn_sua";
             this.btn_sua.ShadowDecoration.Parent = this.btn_sua;
             this.btn_sua.Size = new System.Drawing.Size(109, 43);
@@ -311,7 +312,7 @@ namespace GUI
             this.btn_xoa.ForeColor = System.Drawing.Color.White;
             this.btn_xoa.HoverState.Parent = this.btn_xoa;
             this.btn_xoa.Location = new System.Drawing.Point(238, 4);
-            this.btn_xoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_xoa.Margin = new System.Windows.Forms.Padding(4);
             this.btn_xoa.Name = "btn_xoa";
             this.btn_xoa.ShadowDecoration.Parent = this.btn_xoa;
             this.btn_xoa.Size = new System.Drawing.Size(109, 43);
@@ -327,7 +328,7 @@ namespace GUI
             this.btn_taiLai.ForeColor = System.Drawing.Color.White;
             this.btn_taiLai.HoverState.Parent = this.btn_taiLai;
             this.btn_taiLai.Location = new System.Drawing.Point(4, 55);
-            this.btn_taiLai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_taiLai.Margin = new System.Windows.Forms.Padding(4);
             this.btn_taiLai.Name = "btn_taiLai";
             this.btn_taiLai.ShadowDecoration.Parent = this.btn_taiLai;
             this.btn_taiLai.Size = new System.Drawing.Size(109, 43);
@@ -343,7 +344,7 @@ namespace GUI
             this.btn_huy.ForeColor = System.Drawing.Color.White;
             this.btn_huy.HoverState.Parent = this.btn_huy;
             this.btn_huy.Location = new System.Drawing.Point(121, 55);
-            this.btn_huy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_huy.Margin = new System.Windows.Forms.Padding(4);
             this.btn_huy.Name = "btn_huy";
             this.btn_huy.ShadowDecoration.Parent = this.btn_huy;
             this.btn_huy.Size = new System.Drawing.Size(109, 43);
@@ -359,7 +360,7 @@ namespace GUI
             this.btn_luu.ForeColor = System.Drawing.Color.White;
             this.btn_luu.HoverState.Parent = this.btn_luu;
             this.btn_luu.Location = new System.Drawing.Point(238, 55);
-            this.btn_luu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_luu.Margin = new System.Windows.Forms.Padding(4);
             this.btn_luu.Name = "btn_luu";
             this.btn_luu.ShadowDecoration.Parent = this.btn_luu;
             this.btn_luu.Size = new System.Drawing.Size(109, 43);
@@ -373,7 +374,7 @@ namespace GUI
             this.panel2.Controls.Add(this.flowLayoutPanel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(439, 683);
             this.panel2.TabIndex = 1;
@@ -409,7 +410,7 @@ namespace GUI
             this.panel3.Controls.Add(this.lb_timKiem);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(439, 577);
             this.panel3.TabIndex = 2;
@@ -431,7 +432,7 @@ namespace GUI
             "Nữ"});
             this.cb_gioiTinh.ItemsAppearance.Parent = this.cb_gioiTinh;
             this.cb_gioiTinh.Location = new System.Drawing.Point(133, 188);
-            this.cb_gioiTinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_gioiTinh.Margin = new System.Windows.Forms.Padding(4);
             this.cb_gioiTinh.Name = "cb_gioiTinh";
             this.cb_gioiTinh.ShadowDecoration.Parent = this.cb_gioiTinh;
             this.cb_gioiTinh.Size = new System.Drawing.Size(151, 36);
@@ -445,7 +446,7 @@ namespace GUI
             this.btn_KTKL.ForeColor = System.Drawing.Color.White;
             this.btn_KTKL.HoverState.Parent = this.btn_KTKL;
             this.btn_KTKL.Location = new System.Drawing.Point(175, 512);
-            this.btn_KTKL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_KTKL.Margin = new System.Windows.Forms.Padding(4);
             this.btn_KTKL.Name = "btn_KTKL";
             this.btn_KTKL.ShadowDecoration.Parent = this.btn_KTKL;
             this.btn_KTKL.Size = new System.Drawing.Size(189, 34);
@@ -704,7 +705,7 @@ namespace GUI
             this.btn_maHD.ForeColor = System.Drawing.Color.White;
             this.btn_maHD.HoverState.Parent = this.btn_maHD;
             this.btn_maHD.Location = new System.Drawing.Point(377, 474);
-            this.btn_maHD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_maHD.Margin = new System.Windows.Forms.Padding(4);
             this.btn_maHD.Name = "btn_maHD";
             this.btn_maHD.ShadowDecoration.Parent = this.btn_maHD;
             this.btn_maHD.Size = new System.Drawing.Size(61, 31);
@@ -720,7 +721,7 @@ namespace GUI
             this.btn_chiTietPhong.ForeColor = System.Drawing.Color.White;
             this.btn_chiTietPhong.HoverState.Parent = this.btn_chiTietPhong;
             this.btn_chiTietPhong.Location = new System.Drawing.Point(377, 428);
-            this.btn_chiTietPhong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_chiTietPhong.Margin = new System.Windows.Forms.Padding(4);
             this.btn_chiTietPhong.Name = "btn_chiTietPhong";
             this.btn_chiTietPhong.ShadowDecoration.Parent = this.btn_chiTietPhong;
             this.btn_chiTietPhong.Size = new System.Drawing.Size(61, 31);
@@ -736,7 +737,7 @@ namespace GUI
             this.btn_chiTietTN.ForeColor = System.Drawing.Color.White;
             this.btn_chiTietTN.HoverState.Parent = this.btn_chiTietTN;
             this.btn_chiTietTN.Location = new System.Drawing.Point(377, 384);
-            this.btn_chiTietTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_chiTietTN.Margin = new System.Windows.Forms.Padding(4);
             this.btn_chiTietTN.Name = "btn_chiTietTN";
             this.btn_chiTietTN.ShadowDecoration.Parent = this.btn_chiTietTN;
             this.btn_chiTietTN.Size = new System.Drawing.Size(61, 31);
@@ -752,7 +753,7 @@ namespace GUI
             this.btn_timKiem.ForeColor = System.Drawing.Color.White;
             this.btn_timKiem.HoverState.Parent = this.btn_timKiem;
             this.btn_timKiem.Location = new System.Drawing.Point(373, 21);
-            this.btn_timKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_timKiem.Margin = new System.Windows.Forms.Padding(4);
             this.btn_timKiem.Name = "btn_timKiem";
             this.btn_timKiem.ShadowDecoration.Parent = this.btn_timKiem;
             this.btn_timKiem.Size = new System.Drawing.Size(61, 31);
@@ -766,7 +767,7 @@ namespace GUI
             this.dtp_ngaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_ngaySinh.HoverState.Parent = this.dtp_ngaySinh;
             this.dtp_ngaySinh.Location = new System.Drawing.Point(133, 240);
-            this.dtp_ngaySinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_ngaySinh.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_ngaySinh.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtp_ngaySinh.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtp_ngaySinh.Name = "dtp_ngaySinh";
@@ -897,10 +898,10 @@ namespace GUI
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_SinhVien";
             this.Text = "frm_SinhVien2";
-            this.Load += new System.EventHandler(this.frm_SinhVien2_Load);
+            this.Load += new System.EventHandler(this.frm_SinhVien_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_sinhVien)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);

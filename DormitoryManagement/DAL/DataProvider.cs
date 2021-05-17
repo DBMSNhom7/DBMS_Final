@@ -14,12 +14,13 @@ namespace DAL
         SqlCommand cmd;
         SqlDataAdapter adp;
 
-        string connectStr =
-            "Data Source=SALTER\\SALTER;Initial Catalog=QLKTX;Integrated Security=True";
+        //string connectStr =
+        //    "Data Source=SALTER\\SALTER;Initial Catalog=QLKTX;Integrated Security=True";
 
         public DataProvider()
         {
-            conn = new SqlConnection(connectStr);
+            //conn = new SqlConnection(connectStr);
+            conn = DatabaseConnection.GetConnection();
             cmd = conn.CreateCommand();
         }
 

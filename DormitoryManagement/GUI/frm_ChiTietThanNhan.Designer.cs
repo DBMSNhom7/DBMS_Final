@@ -54,10 +54,9 @@ namespace GUI
             this.lb_dienThoai.AutoSize = true;
             this.lb_dienThoai.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_dienThoai.ForeColor = System.Drawing.Color.White;
-            this.lb_dienThoai.Location = new System.Drawing.Point(25, 188);
-            this.lb_dienThoai.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_dienThoai.Location = new System.Drawing.Point(33, 222);
             this.lb_dienThoai.Name = "lb_dienThoai";
-            this.lb_dienThoai.Size = new System.Drawing.Size(87, 20);
+            this.lb_dienThoai.Size = new System.Drawing.Size(109, 25);
             this.lb_dienThoai.TabIndex = 27;
             this.lb_dienThoai.Text = "Điện Thoại:";
             // 
@@ -66,10 +65,9 @@ namespace GUI
             this.lb_diaChi.AutoSize = true;
             this.lb_diaChi.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_diaChi.ForeColor = System.Drawing.Color.White;
-            this.lb_diaChi.Location = new System.Drawing.Point(25, 152);
-            this.lb_diaChi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_diaChi.Location = new System.Drawing.Point(33, 178);
             this.lb_diaChi.Name = "lb_diaChi";
-            this.lb_diaChi.Size = new System.Drawing.Size(62, 20);
+            this.lb_diaChi.Size = new System.Drawing.Size(79, 25);
             this.lb_diaChi.TabIndex = 26;
             this.lb_diaChi.Text = "Địa Chỉ:";
             // 
@@ -78,10 +76,9 @@ namespace GUI
             this.lb_quanHeVoiSV.AutoSize = true;
             this.lb_quanHeVoiSV.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_quanHeVoiSV.ForeColor = System.Drawing.Color.White;
-            this.lb_quanHeVoiSV.Location = new System.Drawing.Point(25, 118);
-            this.lb_quanHeVoiSV.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_quanHeVoiSV.Location = new System.Drawing.Point(33, 145);
             this.lb_quanHeVoiSV.Name = "lb_quanHeVoiSV";
-            this.lb_quanHeVoiSV.Size = new System.Drawing.Size(122, 20);
+            this.lb_quanHeVoiSV.Size = new System.Drawing.Size(153, 25);
             this.lb_quanHeVoiSV.TabIndex = 25;
             this.lb_quanHeVoiSV.Text = "Quan Hệ Với SV:";
             // 
@@ -90,10 +87,9 @@ namespace GUI
             this.lb_gioiTinh.AutoSize = true;
             this.lb_gioiTinh.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_gioiTinh.ForeColor = System.Drawing.Color.White;
-            this.lb_gioiTinh.Location = new System.Drawing.Point(25, 82);
-            this.lb_gioiTinh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_gioiTinh.Location = new System.Drawing.Point(33, 101);
             this.lb_gioiTinh.Name = "lb_gioiTinh";
-            this.lb_gioiTinh.Size = new System.Drawing.Size(74, 20);
+            this.lb_gioiTinh.Size = new System.Drawing.Size(94, 25);
             this.lb_gioiTinh.TabIndex = 24;
             this.lb_gioiTinh.Text = "Giới Tính:";
             // 
@@ -102,10 +98,9 @@ namespace GUI
             this.lb_CMND.AutoSize = true;
             this.lb_CMND.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_CMND.ForeColor = System.Drawing.Color.White;
-            this.lb_CMND.Location = new System.Drawing.Point(25, 14);
-            this.lb_CMND.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_CMND.Location = new System.Drawing.Point(33, 17);
             this.lb_CMND.Name = "lb_CMND";
-            this.lb_CMND.Size = new System.Drawing.Size(59, 20);
+            this.lb_CMND.Size = new System.Drawing.Size(76, 25);
             this.lb_CMND.TabIndex = 22;
             this.lb_CMND.Text = "CMND:";
             // 
@@ -114,10 +109,9 @@ namespace GUI
             this.lb_hoTen.AutoSize = true;
             this.lb_hoTen.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_hoTen.ForeColor = System.Drawing.Color.White;
-            this.lb_hoTen.Location = new System.Drawing.Point(25, 46);
-            this.lb_hoTen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_hoTen.Location = new System.Drawing.Point(33, 57);
             this.lb_hoTen.Name = "lb_hoTen";
-            this.lb_hoTen.Size = new System.Drawing.Size(61, 20);
+            this.lb_hoTen.Size = new System.Drawing.Size(76, 25);
             this.lb_hoTen.TabIndex = 23;
             this.lb_hoTen.Text = "Họ Tên:";
             // 
@@ -136,8 +130,9 @@ namespace GUI
             this.panel1.Controls.Add(this.lb_gioiTinh);
             this.panel1.Controls.Add(this.lb_quanHeVoiSV);
             this.panel1.Location = new System.Drawing.Point(1, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(437, 233);
+            this.panel1.Size = new System.Drawing.Size(587, 271);
             this.panel1.TabIndex = 28;
             // 
             // cb_gioiTinh
@@ -156,10 +151,11 @@ namespace GUI
             "Nam",
             "Nữ"});
             this.cb_gioiTinh.ItemsAppearance.Parent = this.cb_gioiTinh;
-            this.cb_gioiTinh.Location = new System.Drawing.Point(150, 71);
+            this.cb_gioiTinh.Location = new System.Drawing.Point(200, 93);
+            this.cb_gioiTinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cb_gioiTinh.Name = "cb_gioiTinh";
             this.cb_gioiTinh.ShadowDecoration.Parent = this.cb_gioiTinh;
-            this.cb_gioiTinh.Size = new System.Drawing.Size(85, 36);
+            this.cb_gioiTinh.Size = new System.Drawing.Size(112, 36);
             this.cb_gioiTinh.TabIndex = 33;
             // 
             // txb_dienThoai
@@ -179,13 +175,14 @@ namespace GUI
             this.txb_dienThoai.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txb_dienThoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_dienThoai.HoverState.Parent = this.txb_dienThoai;
-            this.txb_dienThoai.Location = new System.Drawing.Point(150, 183);
+            this.txb_dienThoai.Location = new System.Drawing.Point(200, 216);
+            this.txb_dienThoai.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txb_dienThoai.Name = "txb_dienThoai";
             this.txb_dienThoai.PasswordChar = '\0';
             this.txb_dienThoai.PlaceholderText = "";
             this.txb_dienThoai.SelectedText = "";
             this.txb_dienThoai.ShadowDecoration.Parent = this.txb_dienThoai;
-            this.txb_dienThoai.Size = new System.Drawing.Size(275, 25);
+            this.txb_dienThoai.Size = new System.Drawing.Size(367, 31);
             this.txb_dienThoai.TabIndex = 32;
             // 
             // txb_diaChi
@@ -205,13 +202,14 @@ namespace GUI
             this.txb_diaChi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txb_diaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_diaChi.HoverState.Parent = this.txb_diaChi;
-            this.txb_diaChi.Location = new System.Drawing.Point(150, 152);
+            this.txb_diaChi.Location = new System.Drawing.Point(200, 178);
+            this.txb_diaChi.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txb_diaChi.Name = "txb_diaChi";
             this.txb_diaChi.PasswordChar = '\0';
             this.txb_diaChi.PlaceholderText = "";
             this.txb_diaChi.SelectedText = "";
             this.txb_diaChi.ShadowDecoration.Parent = this.txb_diaChi;
-            this.txb_diaChi.Size = new System.Drawing.Size(275, 25);
+            this.txb_diaChi.Size = new System.Drawing.Size(367, 31);
             this.txb_diaChi.TabIndex = 31;
             // 
             // txb_quanHeVoiSV
@@ -231,13 +229,14 @@ namespace GUI
             this.txb_quanHeVoiSV.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txb_quanHeVoiSV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_quanHeVoiSV.HoverState.Parent = this.txb_quanHeVoiSV;
-            this.txb_quanHeVoiSV.Location = new System.Drawing.Point(150, 113);
+            this.txb_quanHeVoiSV.Location = new System.Drawing.Point(200, 139);
+            this.txb_quanHeVoiSV.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txb_quanHeVoiSV.Name = "txb_quanHeVoiSV";
             this.txb_quanHeVoiSV.PasswordChar = '\0';
             this.txb_quanHeVoiSV.PlaceholderText = "";
             this.txb_quanHeVoiSV.SelectedText = "";
             this.txb_quanHeVoiSV.ShadowDecoration.Parent = this.txb_quanHeVoiSV;
-            this.txb_quanHeVoiSV.Size = new System.Drawing.Size(275, 25);
+            this.txb_quanHeVoiSV.Size = new System.Drawing.Size(367, 31);
             this.txb_quanHeVoiSV.TabIndex = 30;
             // 
             // txb_hoTen
@@ -257,13 +256,14 @@ namespace GUI
             this.txb_hoTen.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txb_hoTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_hoTen.HoverState.Parent = this.txb_hoTen;
-            this.txb_hoTen.Location = new System.Drawing.Point(150, 41);
+            this.txb_hoTen.Location = new System.Drawing.Point(200, 50);
+            this.txb_hoTen.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txb_hoTen.Name = "txb_hoTen";
             this.txb_hoTen.PasswordChar = '\0';
             this.txb_hoTen.PlaceholderText = "";
             this.txb_hoTen.SelectedText = "";
             this.txb_hoTen.ShadowDecoration.Parent = this.txb_hoTen;
-            this.txb_hoTen.Size = new System.Drawing.Size(275, 25);
+            this.txb_hoTen.Size = new System.Drawing.Size(367, 31);
             this.txb_hoTen.TabIndex = 29;
             // 
             // txb_CMND
@@ -283,13 +283,14 @@ namespace GUI
             this.txb_CMND.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txb_CMND.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_CMND.HoverState.Parent = this.txb_CMND;
-            this.txb_CMND.Location = new System.Drawing.Point(150, 9);
+            this.txb_CMND.Location = new System.Drawing.Point(200, 11);
+            this.txb_CMND.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txb_CMND.Name = "txb_CMND";
             this.txb_CMND.PasswordChar = '\0';
             this.txb_CMND.PlaceholderText = "";
             this.txb_CMND.SelectedText = "";
             this.txb_CMND.ShadowDecoration.Parent = this.txb_CMND;
-            this.txb_CMND.Size = new System.Drawing.Size(275, 25);
+            this.txb_CMND.Size = new System.Drawing.Size(367, 31);
             this.txb_CMND.TabIndex = 28;
             // 
             // btn_OK
@@ -299,10 +300,11 @@ namespace GUI
             this.btn_OK.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_OK.ForeColor = System.Drawing.Color.White;
             this.btn_OK.HoverState.Parent = this.btn_OK;
-            this.btn_OK.Location = new System.Drawing.Point(107, 261);
+            this.btn_OK.Location = new System.Drawing.Point(147, 284);
+            this.btn_OK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_OK.Name = "btn_OK";
             this.btn_OK.ShadowDecoration.Parent = this.btn_OK;
-            this.btn_OK.Size = new System.Drawing.Size(82, 35);
+            this.btn_OK.Size = new System.Drawing.Size(109, 43);
             this.btn_OK.TabIndex = 4;
             this.btn_OK.Text = "OK";
             this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
@@ -314,10 +316,11 @@ namespace GUI
             this.btn_huy.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_huy.ForeColor = System.Drawing.Color.White;
             this.btn_huy.HoverState.Parent = this.btn_huy;
-            this.btn_huy.Location = new System.Drawing.Point(237, 261);
+            this.btn_huy.Location = new System.Drawing.Point(320, 284);
+            this.btn_huy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_huy.Name = "btn_huy";
             this.btn_huy.ShadowDecoration.Parent = this.btn_huy;
-            this.btn_huy.Size = new System.Drawing.Size(82, 35);
+            this.btn_huy.Size = new System.Drawing.Size(109, 43);
             this.btn_huy.TabIndex = 7;
             this.btn_huy.Text = "Huỷ";
             this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
@@ -326,18 +329,19 @@ namespace GUI
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
-            // frm_ThanNhan2
+            // frm_ChiTietThanNhan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(450, 308);
+            this.ClientSize = new System.Drawing.Size(590, 347);
             this.ControlBox = false;
             this.Controls.Add(this.btn_huy);
             this.Controls.Add(this.btn_OK);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frm_ThanNhan2";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "frm_ChiTietThanNhan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_ThanNhan2";
             this.Load += new System.EventHandler(this.frm_ThanNhan2_Load);
