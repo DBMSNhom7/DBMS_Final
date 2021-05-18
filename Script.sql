@@ -729,10 +729,6 @@ BEGIN
 END
 GO
 
-EXECUTE dbo.spLayTaiKhoan_TheoTKMK @taiKhoan = 'truongtoad01', -- varchar(15)
-                                   @matKhau = 'matkhau'   -- varchar(1000)
-
-
 CREATE OR ALTER PROCEDURE spLayTaiKhoan_TheoTenTK
 (@taiKhoan VARCHAR(15))
 AS

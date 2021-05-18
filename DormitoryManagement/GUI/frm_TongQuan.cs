@@ -13,11 +13,11 @@ namespace GUI
 {
     public partial class frm_TongQuan : Form
     {
-        int iSinhVien = 0;
-        int iHopDong = 0;
-        int iSoKhu = 0;
-        int iSoPhongSanCo = 0;
+        int iTongSoToa = 0;
+        int iTongSoPhong = 0;
         int iSoPhongConTrong = 0;
+        int iTongSoSinhVien = 0;
+        int iChoOConTrong = 0;
         int tongSoSV = 0;
         private SinhVienBLL _sinhVienBLL = new SinhVienBLL();
 
@@ -28,9 +28,11 @@ namespace GUI
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            iSinhVien = 0;
-            iHopDong = 0;
-            iSoPhongSanCo = 0;
+            iTongSoToa = 0;
+            iTongSoPhong = 0;
+            iSoPhongConTrong = 0;
+            iTongSoSinhVien = 0;
+            iChoOConTrong = 0;
 
             //progressbarSucChua.Maximum = soPhongSanCo * 4; // giả thử phòng có 4 giường
             //progressbarTyLeThanhToanHopDong.Maximum = tongSoHopDong;
@@ -66,7 +68,7 @@ namespace GUI
             //if (iHopDong <= tongSoHopDong) { labelTongSoHopDong.Text = iHopDong.ToString(); iHopDong += 1; }
 
             // Tổng số sinh viên
-            if (iSinhVien <= tongSoSV) { lb_soSVDangO.Text = iSinhVien.ToString(); iSinhVien += 1; }
+            if (iTongSoSinhVien <= tongSoSV) { lb_soSVDangO.Text = iTongSoSinhVien.ToString(); iTongSoSinhVien += 1; }
 
             // Tỷ lệ thanh toán hợp đồng
             //if (progressbarTyLeThanhToanHopDong.Value <= tongSoHopDongDaThanhToan) { progressbarTyLeThanhToanHopDong.Value += 1; }

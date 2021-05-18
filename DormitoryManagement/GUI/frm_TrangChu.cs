@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
+using DAL;
 
 namespace GUI
 {
@@ -98,9 +99,11 @@ namespace GUI
 
         private void btn_dangXuat_Click(object sender, EventArgs e)
         {
+            DatabaseConnection.ChangeConnection(false, "", "");
+
             this.Hide();
             frm_DangNhap fdn = new frm_DangNhap();
-            fdn.Show();
+            fdn.ShowDialog();
         }
     }
 }
