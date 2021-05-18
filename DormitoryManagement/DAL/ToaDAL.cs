@@ -22,5 +22,17 @@ namespace DAL
         {
             return db.ExecuteQueryDataTable("spLayToa", CommandType.StoredProcedure);
         }
+
+        public int layTongSoToa()
+        {
+            try
+            {
+                return (int)db.ExecuteScalar("spLayTongSoToa", CommandType.StoredProcedure);
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
     }
 }

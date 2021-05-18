@@ -22,5 +22,10 @@ namespace BLL
         {
             return _toaDAL.layToa();
         }
+
+        public int layTongSoToa()
+        {
+            return _toaDAL.layTongSoToa();
+        }
     }
 }

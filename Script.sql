@@ -450,6 +450,34 @@ GO
 
 -- SELECT
 -------------------------------------------------------
+
+CREATE OR ALTER PROCEDURE spLayTongSoSinhVien
+AS
+BEGIN
+	SELECT COUNT(MaSV) FROM dbo.SinhVien;
+END
+GO
+
+CREATE OR ALTER PROCEDURE spLayTongSoToa
+AS
+BEGIN
+	SELECT COUNT(TenToa) FROM dbo.Toa;
+END
+GO
+
+CREATE OR ALTER PROCEDURE spLayTongSoPhong
+AS SELECT COUNT(MaPhong) FROM dbo.Phong;
+GO
+
+CREATE OR ALTER PROCEDURE spLaySoPhongConTrong
+AS SELECT COUNT(MaPhong) FROM dbo.Phong WHERE SLDangO = 0;
+GO
+
+CREATE OR ALTER PROCEDURE spLayTongSucChua
+AS SELECT SUM(SucChuaSV) FROM dbo.Phong;
+GO
+
+
 CREATE OR ALTER PROCEDURE spLayPhong_TheoToa
 (@tenToa VARCHAR(15))
 AS
@@ -1044,8 +1072,13 @@ GRANT EXECUTE ON [dbo].[spLaySinhVien_DGV] TO rlBanQuanLy;
 GRANT EXECUTE ON [dbo].[spLaySinhVien_TheoMaSV] TO rlBanQuanLy;
 GRANT EXECUTE ON [dbo].[spLaySinhVien_TheoPhong_DGV] TO rlBanQuanLy;
 GRANT EXECUTE ON [dbo].[spLaySinhVien_TimKiem_DGV] TO rlBanQuanLy;
+GRANT EXECUTE ON [dbo].[spLaySoPhongConTrong] TO rlBanQuanLy;
 GRANT EXECUTE ON [dbo].[spLayThanNhan_TheoCMNDTN] TO rlBanQuanLy;
 GRANT EXECUTE ON [dbo].[spLayToa] TO rlBanQuanLy;
+GRANT EXECUTE ON [dbo].[spLayTongSoPhong] TO rlBanQuanLy;
+GRANT EXECUTE ON [dbo].[spLayTongSoSinhVien] TO rlBanQuanLy;
+GRANT EXECUTE ON [dbo].[spLayTongSoToa] TO rlBanQuanLy;
+GRANT EXECUTE ON [dbo].[spLayTongSucChua] TO rlBanQuanLy;
 GRANT EXECUTE ON [dbo].[spSuaHoaDonDienNuoc] TO rlBanQuanLy;
 GRANT EXECUTE ON [dbo].[spSuaNhanVien] TO rlBanQuanLy;
 GRANT EXECUTE ON [dbo].[spSuaPhong] TO rlBanQuanLy;

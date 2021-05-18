@@ -52,5 +52,41 @@ namespace DAL
                 new SqlParameter("@maPhong", maPhong), new SqlParameter("@maLoai", maLoai),
                 new SqlParameter("@sucChua", sucChua));
         }
+
+        public int layTongSoPhong()
+        {
+            try
+            {
+                return (int)db.ExecuteScalar("spLayTongSoPhong", CommandType.StoredProcedure);
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
+
+        public int laySoPhongConTrong()
+        {
+            try
+            {
+                return (int)db.ExecuteScalar("spLaySoPhongConTrong", CommandType.StoredProcedure);
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
+
+        public int layTongSucChua()
+        {
+            try
+            {
+                return (int)db.ExecuteScalar("spLayTongSucChua", CommandType.StoredProcedure);
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
     }
 }

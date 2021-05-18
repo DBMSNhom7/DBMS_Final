@@ -13,13 +13,21 @@ namespace GUI
 {
     public partial class frm_TongQuan : Form
     {
-        int iTongSoToa = 0;
-        int iTongSoPhong = 0;
-        int iSoPhongConTrong = 0;
-        int iTongSoSinhVien = 0;
-        int iChoOConTrong = 0;
-        int tongSoSV = 0;
+        private int iTongSoToa = 0, sTongSoToa = 1;
+        private int iTongSoPhong = 0, sTongSoPhong = 1;
+        private int iSoPhongConTrong = 0, sSoPhongConTrong = 1;
+        private int iTongSoSinhVien = 0, sTongSoSinhVien = 1;
+        private int iChoOConTrong = 0, sChoOConTrong = 1;
+
+        private int tongSoToa = 0;
+        private int tongSoPhong = 0;
+        private int soPhongConTrong = 0;
+        private int tongSoSinhVien = 0;
+        private int choOConTrong = 0;
+
         private SinhVienBLL _sinhVienBLL = new SinhVienBLL();
+        private ToaBLL _toaBLL = new ToaBLL();
+        private PhongBLL _phongBLL = new PhongBLL();
 
         public frm_TongQuan()
         {
@@ -38,7 +46,17 @@ namespace GUI
             //progressbarTyLeThanhToanHopDong.Maximum = tongSoHopDong;
             //progressbarTyLeThanhToanDienNuoc.Maximum = tongSoHoaDonDienNuoc;
             //progressbarPhongDaDung.Percentage = (int)((soPhongDaDung * 1.0f / soPhongSanCo) * 100);
-            tongSoSV = _sinhVienBLL.layTongSoSinhVien();
+            tongSoToa = _toaBLL.layTongSoToa();
+            tongSoPhong = _phongBLL.layTongSoPhong();
+            soPhongConTrong = _phongBLL.laySoPhongConTrong();
+            tongSoSinhVien = _sinhVienBLL.layTongSoSinhVien();
+            choOConTrong = _phongBLL.layTongSucChua() - tongSoSinhVien;
+
+            sTongSoToa = (int)tongSoToa / 10;
+            sTongSoPhong = (int)tongSoPhong / 10;
+            sSoPhongConTrong = (int)soPhongConTrong / 10;
+            sTongSoSinhVien = (int)tongSoSinhVien / 10;
+            sChoOConTrong = (int)choOConTrong / 10;
 
             timer.Enabled = true;
         }
@@ -55,6 +73,78 @@ namespace GUI
 
         private void timer_Tick(object sender, EventArgs e)
         {
+            if (iTongSoToa <= tongSoToa)
+            {
+                if (tongSoToa - iTongSoToa < 10)
+                {
+                    lb_tongSoToa.Text = iTongSoToa.ToString();
+                    iTongSoToa++;
+                }
+                else
+                {
+                    lb_tongSoToa.Text = iTongSoToa.ToString();
+                    iTongSoToa += sTongSoToa;
+                }
+            }
+
+            if (iTongSoPhong <= tongSoPhong)
+            {
+                if (tongSoPhong - iTongSoPhong < 10)
+                {
+                    lb_tongSoPhong.Text = iTongSoPhong.ToString();
+                    iTongSoPhong++;
+                }
+                else
+                {
+                    lb_tongSoPhong.Text = iTongSoPhong.ToString();
+                    iTongSoPhong += sTongSoPhong;
+                }
+            }
+
+
+
+            if (iSoPhongConTrong <= soPhongConTrong)
+            {
+                if (soPhongConTrong - iSoPhongConTrong < 10)
+                {
+                    lb_phongConTrong.Text = iSoPhongConTrong.ToString();
+                    iSoPhongConTrong++;
+                }
+                else
+                {
+                    lb_phongConTrong.Text = iSoPhongConTrong.ToString();
+                    iSoPhongConTrong += sSoPhongConTrong;
+                }
+            }
+
+            if (iTongSoSinhVien <= tongSoSinhVien)
+            {
+                if (tongSoSinhVien - iTongSoSinhVien < 10)
+                {
+                    lb_soSVDangO.Text = iTongSoSinhVien.ToString();
+                    iTongSoSinhVien++;
+                }
+                else
+                {
+                    lb_soSVDangO.Text = iTongSoSinhVien.ToString();
+                    iTongSoSinhVien += sTongSoSinhVien;
+                }
+            }
+
+            if (iChoOConTrong <= choOConTrong)
+            {
+                if (choOConTrong - iChoOConTrong < 10)
+                {
+                    lb_choOConTrong.Text = iChoOConTrong.ToString();
+                    iChoOConTrong++;
+                }
+                else
+                {
+                    lb_choOConTrong.Text = iChoOConTrong.ToString();
+                    iChoOConTrong += sChoOConTrong;
+                }
+            }
+
             //// sức chứa hiện tại = số giường sẵn có : số hợp đồng
             //if (progressbarSucChua.Value <= tongSoHopDong) progressbarSucChua.Value += 1;
 
@@ -68,7 +158,6 @@ namespace GUI
             //if (iHopDong <= tongSoHopDong) { labelTongSoHopDong.Text = iHopDong.ToString(); iHopDong += 1; }
 
             // Tổng số sinh viên
-            if (iTongSoSinhVien <= tongSoSV) { lb_soSVDangO.Text = iTongSoSinhVien.ToString(); iTongSoSinhVien += 1; }
 
             // Tỷ lệ thanh toán hợp đồng
             //if (progressbarTyLeThanhToanHopDong.Value <= tongSoHopDongDaThanhToan) { progressbarTyLeThanhToanHopDong.Value += 1; }

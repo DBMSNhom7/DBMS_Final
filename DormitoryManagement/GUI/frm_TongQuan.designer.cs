@@ -210,7 +210,7 @@
             this.lb_tongSoPhong.Name = "lb_tongSoPhong";
             this.lb_tongSoPhong.Size = new System.Drawing.Size(356, 46);
             this.lb_tongSoPhong.TabIndex = 4;
-            this.lb_tongSoPhong.Text = "10";
+            this.lb_tongSoPhong.Text = "0";
             this.lb_tongSoPhong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pb_tongSoPhong
@@ -320,7 +320,7 @@
             this.lb_phongConTrong.Name = "lb_phongConTrong";
             this.lb_phongConTrong.Size = new System.Drawing.Size(365, 46);
             this.lb_phongConTrong.TabIndex = 4;
-            this.lb_phongConTrong.Text = "10";
+            this.lb_phongConTrong.Text = "0";
             this.lb_phongConTrong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pb_phongConTrong
@@ -375,7 +375,7 @@
             this.lb_choOConTrong.Name = "lb_choOConTrong";
             this.lb_choOConTrong.Size = new System.Drawing.Size(370, 46);
             this.lb_choOConTrong.TabIndex = 13;
-            this.lb_choOConTrong.Text = "10";
+            this.lb_choOConTrong.Text = "0";
             this.lb_choOConTrong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pb_choOConTrong
@@ -404,7 +404,7 @@
             this.lb_choOConTrong_title.Text = "Chỗ Ở Còn Trống";
             this.lb_choOConTrong_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Dashboard
+            // frm_TongQuan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -418,7 +418,7 @@
             this.Controls.Add(this.pnl_soSVDangO);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Dashboard";
+            this.Name = "frm_TongQuan";
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Dashboard_MouseDoubleClick);

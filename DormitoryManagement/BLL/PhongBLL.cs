@@ -49,5 +49,20 @@ namespace BLL
             return _phongDAL.suaPhong(phong.MaPhong, phong.MaLoai,
                 phong.SucChuaSV, ref error);
         }
+
+        public int layTongSoPhong()
+        {
+            return _phongDAL.layTongSoPhong();
+        }
+
+        public int laySoPhongConTrong()
+        {
+            return _phongDAL.laySoPhongConTrong();
+        }
+
+        public int layTongSucChua()
+        {
+            return _phongDAL.layTongSucChua();
+        }
     }
 }
