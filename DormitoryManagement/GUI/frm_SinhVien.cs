@@ -249,14 +249,13 @@ namespace GUI
                     btn_xoa.Enabled = btn_taiLai.Enabled =
                     txb_CMNDTN.Enabled = txb_phong.Enabled =
                     txb_maHD.Enabled = dgv_sinhVien.Enabled =
-                    txb_maSV.Enabled = false;
+                    txb_maSV.Enabled = cb_gioiTinh.Enabled = false;
 
                     txb_CMND.Enabled = txb_hoTen.Enabled =
-                        cb_gioiTinh.Enabled = dtp_ngaySinh.Enabled =
-                        txb_diaChi.Enabled = txb_dienThoai.Enabled =
-                        btn_chiTietTN.Enabled = btn_chiTietPhong.Enabled =
-                        btn_maHD.Enabled = btn_luu.Enabled =
-                        btn_huy.Enabled = true;
+                        dtp_ngaySinh.Enabled = txb_diaChi.Enabled =
+                        txb_dienThoai.Enabled = btn_chiTietTN.Enabled =
+                        btn_chiTietPhong.Enabled = btn_maHD.Enabled =
+                        btn_luu.Enabled = btn_huy.Enabled = true;
 
                     txb_CMND.ReadOnly = txb_hoTen.ReadOnly =
                         txb_diaChi.ReadOnly = txb_dienThoai.ReadOnly = false;

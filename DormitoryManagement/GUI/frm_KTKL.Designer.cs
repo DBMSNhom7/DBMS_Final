@@ -644,7 +644,7 @@ namespace GUI
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_KTKL";
             this.Text = "frm_KTKL2";
-            this.Load += new System.EventHandler(this.frm_KTKL2_Load);
+            this.Load += new System.EventHandler(this.frm_KTKL_Load);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

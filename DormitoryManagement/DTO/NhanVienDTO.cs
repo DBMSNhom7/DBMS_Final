@@ -38,7 +38,7 @@ namespace DTO
         {
             this.MaNV = dr["MaNV"].ToString();
             this.HoTen = dr["HoTen"].ToString();
-            this.NgaySinh = dr["NgaySinh"].ToString();
+            this.NgaySinh = DateTime.Parse(dr["NgaySinh"].ToString()).ToString("yyyy-MM-dd");
             this.DiaChi = dr["DiaChi"].ToString();
             this.DienThoai = dr["DienThoai"].ToString();
             this.TenToa = dr["TenToa"].ToString();

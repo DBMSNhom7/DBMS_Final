@@ -30,9 +30,9 @@ namespace DTO
         public HopDongNVDTO(DataRow dr)
         {
             this.MaHD = dr["MaHD"].ToString();
-            this.NgayBatDau = dr["NgayBatDau"].ToString();
-            this.NgayKetThuc = dr["NgayKetThuc"].ToString();
-            this.NgayLap = dr["NgayLap"].ToString();
+            this.NgayBatDau = DateTime.Parse(dr["NgayBatDau"].ToString()).ToString("yyyy-MM-dd");
+            this.NgayKetThuc = DateTime.Parse(dr["NgayKetThuc"].ToString()).ToString("yyyy-MM-dd");
+            this.NgayLap = DateTime.Parse(dr["NgayLap"].ToString()).ToString("yyyy-MM-dd");
             this.LuongThang = dr["LuongThang"].ToString();
         }
 

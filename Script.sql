@@ -388,9 +388,7 @@ GO
 
 -- STORED PROCEDURES
 
--- SELECT
--------------------------------------------------------
-
+--TongQuan
 CREATE OR ALTER PROCEDURE spLayTongSoSinhVien AS
 	SELECT COUNT(MaSV) FROM dbo.SinhVien;
 GO
@@ -411,131 +409,7 @@ CREATE OR ALTER PROCEDURE spLayTongSucChua AS
 	SELECT SUM(SucChuaSV) FROM dbo.Phong;
 GO
 
-
-CREATE OR ALTER PROCEDURE spLayPhong_TheoToa (@tenToa VARCHAR(15)) AS
-BEGIN
-	SELECT MaPhong, dbo.fulTenLoaiPhong(MaLoai) AS TenLoai, SucChuaSV, SLDangO
-	FROM dbo.Phong WHERE TenToa = @tenToa;
-END
-GO
-
-CREATE OR ALTER PROCEDURE spLayToa AS
-	SELECT * FROM dbo.Toa;
-GO
-
-CREATE OR ALTER PROCEDURE spLayKTKL_TimKiem_DGV (@str NVARCHAR(200)) AS
-BEGIN
-	SELECT MaKTKL, HinhThuc, NgayTao, MaSV FROM dbo.KhenThuong_KyLuat
-	WHERE MaKTKL LIKE @str OR
-	dbo.fuConvertToUnsign1(HinhThuc) LIKE dbo.fuConvertToUnsign1(@str) OR
-	NgayTao LIKE @str OR
-	MaSV LIKE @str;
-END
-GO
-
-CREATE OR ALTER PROCEDURE spLayKTKL_DGV AS
-	SELECT * FROM dbo.viewKTKL_DGV;
-GO
-
-CREATE OR ALTER PROCEDURE spLayHoaDonDienNuoc_TimKiem_DGV (@str NVARCHAR(200)) AS
-BEGIN
-	SELECT MaPhong, MaHoaDon, ThanhTien, NgayLap, TrangThai FROM dbo.HoaDonDienNuoc
-	WHERE MaPhong LIKE @str OR
-	MaHoaDon LIKE @str OR
-	ThanhTien LIKE @str OR
-	NgayLap LIKE @str OR
-	dbo.fuConvertToUnsign1(TrangThai) LIKE dbo.fuConvertToUnsign1(@str);
-END
-GO
-
-CREATE OR ALTER PROCEDURE spLayHoaDonDienNuoc_DGV AS
-	SELECT * FROM dbo.viewHoaDonDienNuoc_DGV;
-GO
-
-CREATE OR ALTER PROCEDURE spLayHoaDonDienNuoc_TheoMaHoaDon (@maHoaDon INT) AS
-	SELECT * FROM dbo.HoaDonDienNuoc WHERE MaHoaDon = @maHoaDon;
-GO
-
-CREATE OR ALTER PROCEDURE spLayHoaDonDienNuoc_TheoPhong_DGV (@maPhong VARCHAR(15)) AS
-BEGIN
-	SELECT MaHoaDon, ThanhTien, NgayLap, TrangThai
-	FROM dbo.HoaDonDienNuoc WHERE MaPhong = @maPhong;
-END
-GO
-
-CREATE OR ALTER PROCEDURE spLayPhong_TimKiem_DGV
-(@str NVARCHAR(200))
-AS
-BEGIN
-	SELECT MaPhong, dbo.fulTenLoaiPhong(MaLoai) AS TenLoai, SucChuaSV, SLDangO, TenToa
-	FROM dbo.Phong WHERE MaPhong LIKE @str OR
-	dbo.fuConvertToUnsign1(dbo.fulTenLoaiPhong(MaLoai)) LIKE dbo.fuConvertToUnsign1(@str) OR
-	SucChuaSV LIKE @str OR
-	SLDangO LIKE @str OR
-	TenToa LIKE @str;
-END
-GO
-
-CREATE OR ALTER PROCEDURE spLayPhong_DGV AS
-	SELECT * FROM dbo.viewPhong_DGV;
-GO
-
-CREATE OR ALTER PROCEDURE spLayHDNV_TheoMaHD (@maHD INT) AS
-	SELECT * FROM dbo.HopDong_NV WHERE MaHD = @maHD;
-GO
-
-CREATE OR ALTER PROCEDURE spLayNhanVien_TimKiem_DGV (@str NVARCHAR(200)) AS
-BEGIN
-	SELECT MaNV, HoTen, NgaySinh, TenToa, dbo.fulTenChucVu(MaChucVu) AS TenChucVu
-	FROM dbo.NhanVien WHERE MaNV LIKE @str OR
-	dbo.fuConvertToUnsign1(HoTen) LIKE dbo.fuConvertToUnsign1(@str) OR
-	NgaySinh LIKE @str OR
-	TenToa LIKE @str OR
-	dbo.fuConvertToUnsign1(dbo.fulTenChucVu(MaChucVu)) LIKE dbo.fuConvertToUnsign1(@str);
-END
-GO
-
-CREATE OR ALTER PROCEDURE spLayNhanVien_TheoMaNV (@maNV INT) AS
-BEGIN
-	SELECT MaNV, HoTen, NgaySinh, DiaChi, DienThoai,
-	TenToa, MaChucVu, dbo.fulTenChucVu(MaChucVu) AS TenChucVu,
-	(SELECT MaHD FROM dbo.HopDong_NV WHERE HopDong_NV.MaNV = NhanVien.MaNV) AS MaHD
-	FROM dbo.NhanVien WHERE MaNV = @maNV;
-END
-GO
-
-CREATE OR ALTER PROCEDURE spLayNhanVien_DGV AS
-	SELECT * FROM dbo.viewNhanVien_DGV;
-GO
-
-CREATE OR ALTER PROCEDURE spLayLoaiChucVu AS
-	SELECT * FROM dbo.ChucVu;
-GO
-
-CREATE OR ALTER PROCEDURE spLayKTKL_TheoMaKTKL (@maKTKL INT) AS
-	SELECT *, dbo.fulTenSinhVien(MaSV) AS TenSV
-	FROM dbo.KhenThuong_KyLuat WHERE MaKTKL = @maKTKL;
-GO
-
-CREATE OR ALTER PROCEDURE spLayKTKL_TheoMaSV_DGV (@maSV VARCHAR(15)) AS
-	SELECT MaKTKL, HinhThuc, NgayTao
-	FROM dbo.KhenThuong_KyLuat WHERE MaSV = @maSV;
-GO
-
-CREATE OR ALTER PROCEDURE spLayHDSV_TheoMaHD (@maHD INT) AS
-	SELECT * FROM dbo.HopDong_SV WHERE MaHD = @maHD;
-GO
-
-CREATE OR ALTER PROCEDURE spLayPhong_TheoMaPhong (@maPhong VARCHAR(15)) AS
-	SELECT MaPhong, SucChuaSV, SLDangO, MaLoai,
-	dbo.fulTenLoaiPhong(MaLoai) AS TenLoai, TenToa
-	FROM dbo.Phong WHERE MaPhong = @maPhong;
-GO
-
-CREATE OR ALTER PROCEDURE spLayThanNhan_TheoCMNDTN (@CMNDTN VARCHAR(12)) AS
-	SELECT * FROM dbo.ThanNhan WHERE CMND = @CMNDTN;
-GO
-
+-- SinhVien
 CREATE OR ALTER PROCEDURE spLaySinhVien_TimKiem_DGV (@str NVARCHAR(200)) AS
 BEGIN
 	SELECT MaSV, HoTen, GioiTinh, NgaySinh, DienThoai, MaPhong
@@ -565,72 +439,10 @@ BEGIN
 END
 GO
 
-CREATE OR ALTER PROCEDURE spLayLoaiPhong AS
-SELECT * FROM dbo.LoaiPhong;
-GO
-
-CREATE OR ALTER PROCEDURE spLayTaiKhoan_TheoTKMK
-(@taiKhoan VARCHAR(15), @matKhau VARCHAR(1000)) AS
-	SELECT * FROM dbo.TaiKhoan
-	WHERE TenTaiKhoan = @taiKhoan AND
-	MatKhau = @matKhau;
-GO
-
-CREATE OR ALTER PROCEDURE spLayTaiKhoan_TheoTenTK
-(@taiKhoan VARCHAR(15))
-AS
-BEGIN
-	SELECT TenTaiKhoan, MatKhau, IDLoaiQuyen,
-	(SELECT TenQuyen FROM dbo.LoaiQuyen
-	WHERE IDLoaiQuyen = TaiKhoan.IDLoaiQuyen) AS TenLoaiQuyen,
-	(SELECT MoTa FROM dbo.LoaiQuyen
-	WHERE IDLoaiQuyen = TaiKhoan.IDLoaiQuyen) AS MoTa
-	FROM dbo.TaiKhoan WHERE TenTaiKhoan = @taiKhoan;
-END
-GO
-
-CREATE OR ALTER PROCEDURE spLayTaiKhoan_DGV AS
-	SELECT TenTaiKhoan,	dbo.fulTenLoaiQuyen(IDLoaiQuyen) AS TenQuyen FROM dbo.TaiKhoan;
-GO
-
-CREATE OR ALTER PROCEDURE spLayTaiKhoan_TimKiem_DGV (@str NVARCHAR(200)) AS
-	SELECT TenTaiKhoan, dbo.fulTenLoaiQuyen(IDLoaiQuyen) AS TenQuyen
-	FROM dbo.TaiKhoan WHERE TenTaiKhoan LIKE @str OR
-	dbo.fuConvertToUnsign1(dbo.fulTenLoaiQuyen(IDLoaiQuyen)) LIKE dbo.fuConvertToUnsign1(@str);
-GO
-
-CREATE OR ALTER PROCEDURE spSuaTaiKhoan_TheoTenTK
-(@tenTK VARCHAR(15), @matKhau VARCHAR(1000), @IDLoaiQuyen INT) AS
-BEGIN
-	BEGIN TRANSACTION SuaTaiKhoan;
-	UPDATE dbo.TaiKhoan SET MatKhau = @matKhau, IDLoaiQuyen = @IDLoaiQuyen
-	WHERE TenTaiKhoan = @tenTK;
-	COMMIT TRANSACTION SuaTaiKhoan;
-END
-GO
-
-
-
--- DELETE
--------------------------------------------------------------
 CREATE OR ALTER PROCEDURE spXoaSinhVien_TheoMaSV (@maSV VARCHAR(15)) AS
 	DELETE FROM dbo.SinhVien WHERE MaSV = @maSV;
 GO
 
-CREATE OR ALTER PROCEDURE spXoaNhanVien_TheoMaNV (@maNV INT) AS
-	DELETE FROM dbo.NhanVien WHERE MaNV = @maNV;
-GO
-
-CREATE OR ALTER PROCEDURE spXoaHoaDonDienNuoc_TheoMaHoaDon (@maHoaDon INT) AS
-	DELETE FROM dbo.HoaDonDienNuoc WHERE MaHoaDon = @maHoaDon;
-GO
-
-CREATE OR ALTER PROCEDURE spXoaKTKL_TheoMaKTKL (@maKTKL INT) AS
-	DELETE FROM dbo.KhenThuong_KyLuat WHERE MaKTKL = @maKTKL;
-GO
-
--- INSERT
-----------------------------------------------------------
 CREATE OR ALTER PROCEDURE spThemSinhVien
 (@maSV VARCHAR(15), @CMND VARCHAR(12), @hoTen NVARCHAR(50),
 @gioiTinh NVARCHAR(10), @ngaySinh VARCHAR(15), @diaChi NVARCHAR(150),
@@ -666,44 +478,6 @@ BEGIN
 END
 GO
 
-CREATE OR ALTER PROCEDURE spThemNhanVien
-(@hoTen NVARCHAR(50), @ngaySinh VARCHAR(15), @diaChi NVARCHAR(150),
-@dienThoai VARCHAR(15), @tenToa VARCHAR(15), @maChucVu INT, @ngayBatDau VARCHAR(15),
-@ngayKetThuc VARCHAR(15), @ngayLap VARCHAR(15), @luongThang FLOAT) AS
-BEGIN
-	BEGIN TRANSACTION ThemNV;
-
-	INSERT INTO dbo.NhanVien VALUES
-	(@hoTen, @ngaySinh, @diaChi, @dienThoai, @tenToa, @maChucVu);
-
-	INSERT INTO dbo.HopDong_NV VALUES
-	(@ngayBatDau, @ngayKetThuc, @ngayLap, @luongThang, (SELECT MAX(MaNV) FROM dbo.NhanVien));
-
-	COMMIT TRANSACTION ThemNV;
-END
-GO
-
-CREATE OR ALTER PROCEDURE spThemKTKL
-(@hinhThuc NVARCHAR(50), @moTa NVARCHAR(200), @ngayTao VARCHAR(15), @maSV VARCHAR(15)) AS
-	INSERT INTO dbo.KhenThuong_KyLuat VALUES(@hinhThuc, @moTa, @ngayTao, @maSV);
-GO
-
-CREATE OR ALTER PROCEDURE spThemHoaDonDienNuoc
-(@soDien FLOAT, @soNuoc FLOAT, @thanhTien FLOAT, @ngayLap VARCHAR(15),
-@trangThai NVARCHAR(50), @maPhong VARCHAR(15)) AS
-	INSERT INTO dbo.HoaDonDienNuoc VALUES
-	(@soDien, @soNuoc, @thanhTien, @ngayLap, @trangThai, @maPhong);
-GO
-
-CREATE OR ALTER PROCEDURE spThemTaiKhoan
-(@tenTaiKhoan VARCHAR(15), @matKhau VARCHAR(1000), @IDLoaiQuyen INT) AS
-	INSERT INTO dbo.TaiKhoan VALUES(@tenTaiKhoan, @matKhau, @IDLoaiQuyen);
-GO
-
-
-
--- UPDATE
---------------------------------------------------------------
 CREATE OR ALTER PROCEDURE spSuaSinhVien
 (@maSV VARCHAR(15), @CMND VARCHAR(12), @hoTen NVARCHAR(50), @gioiTinh NVARCHAR(10),
 @ngaySinh VARCHAR(15), @diaChi NVARCHAR(150), @dienThoai VARCHAR(15),
@@ -744,27 +518,82 @@ BEGIN
 END
 GO
 
-CREATE OR ALTER PROCEDURE spSuaNhanVien
-(@maNV INT, @hoTen NVARCHAR(50), @ngaySinh VARCHAR(15), @diaChi NVARCHAR(150),
-@dienThoai VARCHAR(15), @tenToa VARCHAR(15), @maChucVu INT, @ngayBatDau VARCHAR(15),
-@ngayKetThuc VARCHAR(15), @ngayLap VARCHAR(15), @luongThang FLOAT) AS
+CREATE OR ALTER PROCEDURE spLayHDSV_TheoMaHD (@maHD INT) AS
+	SELECT * FROM dbo.HopDong_SV WHERE MaHD = @maHD;
+GO
+
+CREATE OR ALTER PROCEDURE spLayThanNhan_TheoCMNDTN (@CMNDTN VARCHAR(12)) AS
+	SELECT * FROM dbo.ThanNhan WHERE CMND = @CMNDTN;
+GO
+
+-- KTKL
+CREATE OR ALTER PROCEDURE spLayKTKL_TimKiem_DGV (@str NVARCHAR(200)) AS
 BEGIN
-	BEGIN TRANSACTION SuaNV;
-
-	UPDATE dbo.NhanVien SET HoTen = @hoTen, NgaySinh = @ngaySinh,
-	DiaChi = @diaChi, DienThoai = @dienThoai, TenToa = @tenToa, MaChucVu = @maChucVu
-	WHERE MaNV = @maNV;
-
-	IF (EXISTS(SELECT MaHD FROM dbo.HopDong_NV
-		WHERE MaNV = @maNV AND (NgayBatDau <> @ngayBatDau OR NgayKetThuc <> @ngayKetThuc OR
-		NgayLap <> @ngayLap OR LuongThang <> @luongThang)))
-		BEGIN
-			DELETE FROM dbo.HopDong_NV WHERE MaNV = @maNV;
-			INSERT INTO dbo.HopDong_NV VALUES(@ngayBatDau, @ngayKetThuc, @ngayLap, @luongThang, @maNV);
-		END
-
-	COMMIT TRANSACTION SuaNV;
+	SELECT MaKTKL, HinhThuc, NgayTao, MaSV FROM dbo.KhenThuong_KyLuat
+	WHERE MaKTKL LIKE @str OR
+	dbo.fuConvertToUnsign1(HinhThuc) LIKE dbo.fuConvertToUnsign1(@str) OR
+	NgayTao LIKE @str OR
+	MaSV LIKE @str;
 END
+GO
+
+CREATE OR ALTER PROCEDURE spLayKTKL_DGV AS
+	SELECT * FROM dbo.viewKTKL_DGV;
+GO
+
+CREATE OR ALTER PROCEDURE spLayKTKL_TheoMaKTKL (@maKTKL INT) AS
+	SELECT *, dbo.fulTenSinhVien(MaSV) AS TenSV
+	FROM dbo.KhenThuong_KyLuat WHERE MaKTKL = @maKTKL;
+GO
+
+CREATE OR ALTER PROCEDURE spLayKTKL_TheoMaSV_DGV (@maSV VARCHAR(15)) AS
+	SELECT MaKTKL, HinhThuc, NgayTao
+	FROM dbo.KhenThuong_KyLuat WHERE MaSV = @maSV;
+GO
+
+CREATE OR ALTER PROCEDURE spXoaKTKL_TheoMaKTKL (@maKTKL INT) AS
+	DELETE FROM dbo.KhenThuong_KyLuat WHERE MaKTKL = @maKTKL;
+GO
+
+
+CREATE OR ALTER PROCEDURE spThemKTKL
+(@hinhThuc NVARCHAR(50), @moTa NVARCHAR(200), @ngayTao VARCHAR(15), @maSV VARCHAR(15)) AS
+	INSERT INTO dbo.KhenThuong_KyLuat VALUES(@hinhThuc, @moTa, @ngayTao, @maSV);
+GO
+
+-- Phong
+CREATE OR ALTER PROCEDURE spLayPhong_TheoToa (@tenToa VARCHAR(15)) AS
+BEGIN
+	SELECT MaPhong, dbo.fulTenLoaiPhong(MaLoai) AS TenLoai, SucChuaSV, SLDangO
+	FROM dbo.Phong WHERE TenToa = @tenToa;
+END
+GO
+
+CREATE OR ALTER PROCEDURE spLayPhong_TimKiem_DGV
+(@str NVARCHAR(200))
+AS
+BEGIN
+	SELECT MaPhong, dbo.fulTenLoaiPhong(MaLoai) AS TenLoai, SucChuaSV, SLDangO, TenToa
+	FROM dbo.Phong WHERE MaPhong LIKE @str OR
+	dbo.fuConvertToUnsign1(dbo.fulTenLoaiPhong(MaLoai)) LIKE dbo.fuConvertToUnsign1(@str) OR
+	SucChuaSV LIKE @str OR
+	SLDangO LIKE @str OR
+	TenToa LIKE @str;
+END
+GO
+
+CREATE OR ALTER PROCEDURE spLayPhong_DGV AS
+	SELECT * FROM dbo.viewPhong_DGV;
+GO
+
+CREATE OR ALTER PROCEDURE spLayPhong_TheoMaPhong (@maPhong VARCHAR(15)) AS
+	SELECT MaPhong, SucChuaSV, SLDangO, MaLoai,
+	dbo.fulTenLoaiPhong(MaLoai) AS TenLoai, TenToa
+	FROM dbo.Phong WHERE MaPhong = @maPhong;
+GO
+
+CREATE OR ALTER PROCEDURE spLayLoaiPhong AS
+SELECT * FROM dbo.LoaiPhong;
 GO
 
 CREATE OR ALTER PROCEDURE spSuaPhong (@maPhong VARCHAR(15), @maLoai INT, @sucChua TINYINT) AS
@@ -789,16 +618,173 @@ BEGIN
 END
 GO
 
-CREATE OR ALTER PROCEDURE spLayTongSoSinhVien AS
-	SELECT COUNT(MaSV) FROM dbo.SinhVien;
+CREATE OR ALTER PROCEDURE spLayToa AS
+	SELECT * FROM dbo.Toa;
+GO
+
+-- HoaDonDienNuoc
+CREATE OR ALTER PROCEDURE spLayHoaDonDienNuoc_TimKiem_DGV (@str NVARCHAR(200)) AS
+BEGIN
+	SELECT MaPhong, MaHoaDon, ThanhTien, NgayLap, TrangThai FROM dbo.HoaDonDienNuoc
+	WHERE MaPhong LIKE @str OR
+	MaHoaDon LIKE @str OR
+	ThanhTien LIKE @str OR
+	NgayLap LIKE @str OR
+	dbo.fuConvertToUnsign1(TrangThai) LIKE dbo.fuConvertToUnsign1(@str);
+END
+GO
+
+CREATE OR ALTER PROCEDURE spLayHoaDonDienNuoc_DGV AS
+	SELECT * FROM dbo.viewHoaDonDienNuoc_DGV;
+GO
+
+CREATE OR ALTER PROCEDURE spLayHoaDonDienNuoc_TheoMaHoaDon (@maHoaDon INT) AS
+	SELECT * FROM dbo.HoaDonDienNuoc WHERE MaHoaDon = @maHoaDon;
+GO
+
+CREATE OR ALTER PROCEDURE spLayHoaDonDienNuoc_TheoPhong_DGV (@maPhong VARCHAR(15)) AS
+BEGIN
+	SELECT MaHoaDon, ThanhTien, NgayLap, TrangThai
+	FROM dbo.HoaDonDienNuoc WHERE MaPhong = @maPhong;
+END
+GO
+
+CREATE OR ALTER PROCEDURE spXoaHoaDonDienNuoc_TheoMaHoaDon (@maHoaDon INT) AS
+	DELETE FROM dbo.HoaDonDienNuoc WHERE MaHoaDon = @maHoaDon;
+GO
+
+CREATE OR ALTER PROCEDURE spThemHoaDonDienNuoc
+(@soDien FLOAT, @soNuoc FLOAT, @thanhTien FLOAT, @ngayLap VARCHAR(15),
+@trangThai NVARCHAR(50), @maPhong VARCHAR(15)) AS
+	INSERT INTO dbo.HoaDonDienNuoc VALUES
+	(@soDien, @soNuoc, @thanhTien, @ngayLap, @trangThai, @maPhong);
+GO
+
+CREATE OR ALTER PROCEDURE spThemTaiKhoan
+(@tenTaiKhoan VARCHAR(15), @matKhau VARCHAR(1000), @IDLoaiQuyen INT) AS
+	INSERT INTO dbo.TaiKhoan VALUES(@tenTaiKhoan, @matKhau, @IDLoaiQuyen);
 GO
 
 CREATE OR ALTER PROCEDURE spSuaHoaDonDienNuoc (@maHoaDon INT, @trangThai NVARCHAR(50)) AS
 	UPDATE dbo.HoaDonDienNuoc SET TrangThai = @trangThai WHERE MaHoaDon = @maHoaDon;
 GO
 
-CREATE OR ALTER PROCEDURE spLayLoaiTK AS
-	SELECT * FROM dbo.LoaiQuyen;
+-- NhanVien
+CREATE OR ALTER PROCEDURE spLayNhanVien_TimKiem_DGV (@str NVARCHAR(200)) AS
+BEGIN
+	SELECT MaNV, HoTen, NgaySinh, TenToa, dbo.fulTenChucVu(MaChucVu) AS TenChucVu
+	FROM dbo.NhanVien WHERE MaNV LIKE @str OR
+	dbo.fuConvertToUnsign1(HoTen) LIKE dbo.fuConvertToUnsign1(@str) OR
+	NgaySinh LIKE @str OR
+	TenToa LIKE @str OR
+	dbo.fuConvertToUnsign1(dbo.fulTenChucVu(MaChucVu)) LIKE dbo.fuConvertToUnsign1(@str);
+END
+GO
+
+CREATE OR ALTER PROCEDURE spLayNhanVien_TheoMaNV (@maNV INT) AS
+BEGIN
+	SELECT MaNV, HoTen, NgaySinh, DiaChi, DienThoai,
+	TenToa, MaChucVu, dbo.fulTenChucVu(MaChucVu) AS TenChucVu,
+	(SELECT MaHD FROM dbo.HopDong_NV WHERE HopDong_NV.MaNV = NhanVien.MaNV) AS MaHD
+	FROM dbo.NhanVien WHERE MaNV = @maNV;
+END
+GO
+
+CREATE OR ALTER PROCEDURE spLayNhanVien_DGV AS
+	SELECT * FROM dbo.viewNhanVien_DGV;
+GO
+
+CREATE OR ALTER PROCEDURE spXoaNhanVien_TheoMaNV (@maNV INT) AS
+	DELETE FROM dbo.NhanVien WHERE MaNV = @maNV;
+GO
+
+CREATE OR ALTER PROCEDURE spThemNhanVien
+(@hoTen NVARCHAR(50), @ngaySinh VARCHAR(15), @diaChi NVARCHAR(150),
+@dienThoai VARCHAR(15), @tenToa VARCHAR(15), @maChucVu INT, @ngayBatDau VARCHAR(15),
+@ngayKetThuc VARCHAR(15), @ngayLap VARCHAR(15), @luongThang FLOAT) AS
+BEGIN
+	BEGIN TRANSACTION ThemNV;
+
+	INSERT INTO dbo.NhanVien VALUES
+	(@hoTen, @ngaySinh, @diaChi, @dienThoai, @tenToa, @maChucVu);
+
+	INSERT INTO dbo.HopDong_NV VALUES
+	(@ngayBatDau, @ngayKetThuc, @ngayLap, @luongThang, (SELECT MAX(MaNV) FROM dbo.NhanVien));
+
+	COMMIT TRANSACTION ThemNV;
+END
+GO
+
+CREATE OR ALTER PROCEDURE spSuaNhanVien
+(@maNV INT, @hoTen NVARCHAR(50), @ngaySinh VARCHAR(15), @diaChi NVARCHAR(150),
+@dienThoai VARCHAR(15), @tenToa VARCHAR(15), @maChucVu INT, @ngayBatDau VARCHAR(15),
+@ngayKetThuc VARCHAR(15), @ngayLap VARCHAR(15), @luongThang FLOAT) AS
+BEGIN
+	BEGIN TRANSACTION SuaNV;
+
+	UPDATE dbo.NhanVien SET HoTen = @hoTen, NgaySinh = @ngaySinh,
+	DiaChi = @diaChi, DienThoai = @dienThoai, TenToa = @tenToa, MaChucVu = @maChucVu
+	WHERE MaNV = @maNV;
+
+	IF (EXISTS(SELECT MaHD FROM dbo.HopDong_NV
+		WHERE MaNV = @maNV AND (NgayBatDau <> @ngayBatDau OR NgayKetThuc <> @ngayKetThuc OR
+		NgayLap <> @ngayLap OR LuongThang <> @luongThang)))
+		BEGIN
+			DELETE FROM dbo.HopDong_NV WHERE MaNV = @maNV;
+			INSERT INTO dbo.HopDong_NV VALUES(@ngayBatDau, @ngayKetThuc, @ngayLap, @luongThang, @maNV);
+		END
+
+	COMMIT TRANSACTION SuaNV;
+END
+GO
+
+CREATE OR ALTER PROCEDURE spLayLoaiChucVu AS
+	SELECT * FROM dbo.ChucVu;
+GO
+
+CREATE OR ALTER PROCEDURE spLayHDNV_TheoMaHD (@maHD INT) AS
+	SELECT * FROM dbo.HopDong_NV WHERE MaHD = @maHD;
+GO
+
+-- TaiKhoan
+CREATE OR ALTER PROCEDURE spLayTaiKhoan_TheoTKMK
+(@taiKhoan VARCHAR(15), @matKhau VARCHAR(1000)) AS
+	SELECT * FROM dbo.TaiKhoan
+	WHERE TenTaiKhoan = @taiKhoan AND
+	MatKhau = @matKhau;
+GO
+
+CREATE OR ALTER PROCEDURE spLayTaiKhoan_TheoTenTK
+(@taiKhoan VARCHAR(15))
+AS
+BEGIN
+	SELECT TenTaiKhoan, MatKhau, IDLoaiQuyen,
+	(SELECT TenQuyen FROM dbo.LoaiQuyen
+	WHERE IDLoaiQuyen = TaiKhoan.IDLoaiQuyen) AS TenLoaiQuyen,
+	(SELECT MoTa FROM dbo.LoaiQuyen
+	WHERE IDLoaiQuyen = TaiKhoan.IDLoaiQuyen) AS MoTa
+	FROM dbo.TaiKhoan WHERE TenTaiKhoan = @taiKhoan;
+END
+GO
+
+CREATE OR ALTER PROCEDURE spLayTaiKhoan_DGV AS
+	SELECT TenTaiKhoan,	dbo.fulTenLoaiQuyen(IDLoaiQuyen) AS TenQuyen FROM dbo.TaiKhoan;
+GO
+
+CREATE OR ALTER PROCEDURE spLayTaiKhoan_TimKiem_DGV (@str NVARCHAR(200)) AS
+	SELECT TenTaiKhoan, dbo.fulTenLoaiQuyen(IDLoaiQuyen) AS TenQuyen
+	FROM dbo.TaiKhoan WHERE TenTaiKhoan LIKE @str OR
+	dbo.fuConvertToUnsign1(dbo.fulTenLoaiQuyen(IDLoaiQuyen)) LIKE dbo.fuConvertToUnsign1(@str);
+GO
+
+CREATE OR ALTER PROCEDURE spSuaTaiKhoan_TheoTenTK
+(@tenTK VARCHAR(15), @matKhau VARCHAR(1000), @IDLoaiQuyen INT) AS
+BEGIN
+	BEGIN TRANSACTION SuaTaiKhoan;
+	UPDATE dbo.TaiKhoan SET MatKhau = @matKhau, IDLoaiQuyen = @IDLoaiQuyen
+	WHERE TenTaiKhoan = @tenTK;
+	COMMIT TRANSACTION SuaTaiKhoan;
+END
 GO
 
 CREATE OR ALTER PROCEDURE spThemTaiKhoan
@@ -810,6 +796,11 @@ CREATE OR ALTER PROCEDURE spXoaTaiKhoan_TheoTenTK (@tenTK VARCHAR(15)) AS
 	IF (@tenTK <> 'admin') DELETE FROM dbo.TaiKhoan WHERE TenTaiKhoan = @tenTK;
 	ELSE RAISERROR('Không xóa được tài khoản Admin!', 16, 1);
 GO
+
+CREATE OR ALTER PROCEDURE spLayLoaiTK AS
+	SELECT * FROM dbo.LoaiQuyen;
+GO
+
 
 
 

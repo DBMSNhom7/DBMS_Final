@@ -262,20 +262,24 @@ SET IDENTITY_INSERT [dbo].[ChucVu] OFF
 GO
 
 SET IDENTITY_INSERT [dbo].[NhanVien] ON 
-INSERT [dbo].[NhanVien] ([MaNV], [HoTen], [NgaySinh], [DiaChi], [DienThoai], [TenToa], [MaChucVu]) VALUES (1, N'Phan Thanh A', CAST(N'1980-07-17' AS Date), N'Hồ Chí Minh', N'0965369999', N'D01', 1)
-INSERT [dbo].[NhanVien] ([MaNV], [HoTen], [NgaySinh], [DiaChi], [DienThoai], [TenToa], [MaChucVu]) VALUES (2, N'Nguyễn Văn B', CAST(N'1990-04-01' AS Date), N'Bình Định', N'0856985645', N'D01', 2)
-INSERT [dbo].[NhanVien] ([MaNV], [HoTen], [NgaySinh], [DiaChi], [DienThoai], [TenToa], [MaChucVu]) VALUES (3, N'Trần Thanh C', CAST(N'1995-09-08' AS Date), N'Tiền Giang', N'0965865478', N'D01', 3)
-INSERT [dbo].[NhanVien] ([MaNV], [HoTen], [NgaySinh], [DiaChi], [DienThoai], [TenToa], [MaChucVu]) VALUES (4, N'Trần Thị E', CAST(N'1987-09-08' AS Date), N'Tiền Giang', N'0965865478', N'D01', 3)
-INSERT [dbo].[NhanVien] ([MaNV], [HoTen], [NgaySinh], [DiaChi], [DienThoai], [TenToa], [MaChucVu]) VALUES (5, N'Văn Trần K', CAST(N'1990-05-04' AS Date), N'Hồ Chí Minh', N'0965854785', N'D01', 2)
+INSERT [dbo].[NhanVien] ([MaNV], [HoTen], [NgaySinh], [DiaChi], [DienThoai], [TenToa], [MaChucVu]) VALUES (1, N'Phan Thanh Tùng', CAST(N'1980-07-17' AS Date), N'Hồ Chí Minh', N'0965369999', N'D01', 1)
+INSERT [dbo].[NhanVien] ([MaNV], [HoTen], [NgaySinh], [DiaChi], [DienThoai], [TenToa], [MaChucVu]) VALUES (2, N'Nguyễn Văn Ba', CAST(N'1990-04-01' AS Date), N'Bình Định', N'0856985645', N'D01', 2)
+INSERT [dbo].[NhanVien] ([MaNV], [HoTen], [NgaySinh], [DiaChi], [DienThoai], [TenToa], [MaChucVu]) VALUES (3, N'Trần Mỹ Lợi', CAST(N'1995-09-08' AS Date), N'Tiền Giang', N'0965865478', N'D01', 3)
+INSERT [dbo].[NhanVien] ([MaNV], [HoTen], [NgaySinh], [DiaChi], [DienThoai], [TenToa], [MaChucVu]) VALUES (4, N'Trần Thị Lan Anh', CAST(N'1987-09-08' AS Date), N'Tiền Giang', N'0965865478', N'D01', 3)
+INSERT [dbo].[NhanVien] ([MaNV], [HoTen], [NgaySinh], [DiaChi], [DienThoai], [TenToa], [MaChucVu]) VALUES (5, N'Lê Văn Đức', CAST(N'1986-07-18' AS Date), N'TP.HCM', N'0368875869', N'D02', 1)
+INSERT [dbo].[NhanVien] ([MaNV], [HoTen], [NgaySinh], [DiaChi], [DienThoai], [TenToa], [MaChucVu]) VALUES (6, N'Lê Thanh Hoàng', CAST(N'1994-06-14' AS Date), N'Tiền Giang', N'0328745874', N'D02', 2)
+INSERT [dbo].[NhanVien] ([MaNV], [HoTen], [NgaySinh], [DiaChi], [DienThoai], [TenToa], [MaChucVu]) VALUES (7, N'Bùi Thị Kim Hoài', CAST(N'1987-07-17' AS Date), N'TP.HCM', N'0976548214', N'D02', 3)
 SET IDENTITY_INSERT [dbo].[NhanVien] OFF
 GO
 
 SET IDENTITY_INSERT [dbo].[HopDong_NV] ON
-INSERT [dbo].[HopDong_NV] ([MaHD], [NgayBatDau], [NgayKetThuc], [NgayLap], [LuongThang], [MaNV]) VALUES (1, CAST(N'2010-09-19' AS Date), CAST(N'2020-09-19' AS Date), CAST(N'2010-08-18' AS Date), 1000000000, 1)
-INSERT [dbo].[HopDong_NV] ([MaHD], [NgayBatDau], [NgayKetThuc], [NgayLap], [LuongThang], [MaNV]) VALUES (2, CAST(N'2011-09-19' AS Date), CAST(N'2020-09-19' AS Date), CAST(N'2010-08-18' AS Date), 2000000, 2)
-INSERT [dbo].[HopDong_NV] ([MaHD], [NgayBatDau], [NgayKetThuc], [NgayLap], [LuongThang], [MaNV]) VALUES (3, CAST(N'2012-09-19' AS Date), CAST(N'2020-09-19' AS Date), CAST(N'2010-08-18' AS Date), 1000000000, 3)
-INSERT [dbo].[HopDong_NV] ([MaHD], [NgayBatDau], [NgayKetThuc], [NgayLap], [LuongThang], [MaNV]) VALUES (4, CAST(N'2010-09-19' AS Date), CAST(N'2020-09-19' AS Date), CAST(N'2010-08-18' AS Date), 1000000000, 4)
-INSERT [dbo].[HopDong_NV] ([MaHD], [NgayBatDau], [NgayKetThuc], [NgayLap], [LuongThang], [MaNV]) VALUES (5, CAST(N'2011-09-19' AS Date), CAST(N'2020-09-19' AS Date), CAST(N'2010-08-18' AS Date), 2000000, 5)
+INSERT [dbo].[HopDong_NV] ([MaHD], [NgayBatDau], [NgayKetThuc], [NgayLap], [LuongThang], [MaNV]) VALUES (1, CAST(N'2020-01-01' AS Date), CAST(N'2023-12-31' AS Date), CAST(N'2019-08-18' AS Date), 1000000000, 1)
+INSERT [dbo].[HopDong_NV] ([MaHD], [NgayBatDau], [NgayKetThuc], [NgayLap], [LuongThang], [MaNV]) VALUES (2, CAST(N'2020-01-01' AS Date), CAST(N'2024-05-31' AS Date), CAST(N'2019-08-18' AS Date), 2000000, 2)
+INSERT [dbo].[HopDong_NV] ([MaHD], [NgayBatDau], [NgayKetThuc], [NgayLap], [LuongThang], [MaNV]) VALUES (3, CAST(N'2020-01-01' AS Date), CAST(N'2022-09-19' AS Date), CAST(N'2019-08-18' AS Date), 1000000000, 3)
+INSERT [dbo].[HopDong_NV] ([MaHD], [NgayBatDau], [NgayKetThuc], [NgayLap], [LuongThang], [MaNV]) VALUES (4, CAST(N'2020-01-01' AS Date), CAST(N'2023-07-19' AS Date), CAST(N'2019-08-18' AS Date), 1000000000, 4)
+INSERT [dbo].[HopDong_NV] ([MaHD], [NgayBatDau], [NgayKetThuc], [NgayLap], [LuongThang], [MaNV]) VALUES (5, CAST(N'2021-05-19' AS Date), CAST(N'2025-05-19' AS Date), CAST(N'2021-05-19' AS Date), 6000000, 5)
+INSERT [dbo].[HopDong_NV] ([MaHD], [NgayBatDau], [NgayKetThuc], [NgayLap], [LuongThang], [MaNV]) VALUES (6, CAST(N'2021-05-19' AS Date), CAST(N'2025-05-19' AS Date), CAST(N'2021-05-19' AS Date), 4500000, 6)
+INSERT [dbo].[HopDong_NV] ([MaHD], [NgayBatDau], [NgayKetThuc], [NgayLap], [LuongThang], [MaNV]) VALUES (7, CAST(N'2021-05-19' AS Date), CAST(N'2024-05-19' AS Date), CAST(N'2021-05-19' AS Date), 3500000, 7)
 SET IDENTITY_INSERT [dbo].[HopDong_NV] OFF
 GO
 

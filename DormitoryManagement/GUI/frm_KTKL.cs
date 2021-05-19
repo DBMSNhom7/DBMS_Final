@@ -60,7 +60,7 @@ namespace GUI
             }
         }
 
-        private void frm_KTKL2_Load(object sender, EventArgs e)
+        private void frm_KTKL_Load(object sender, EventArgs e)
         {
             LoadData();
         }
@@ -94,7 +94,10 @@ namespace GUI
 
                     if (!_KTKLBLL.xoaKTKL_TheoMaKTKL(txb_maKTKL.Text, ref err))
                     {
-                        MessageBox.Show(err);
+                        if (err.Contains("permission was denied"))
+                            MessageBox.Show("Không có quyền dùng chức năng này!");
+                        else
+                            MessageBox.Show(err);
                     }
 
                     LoadData();
@@ -170,7 +173,10 @@ namespace GUI
 
                 if (!_KTKLBLL.themKTKL(_KTKLDTO, ref err))
                 {
-                    MessageBox.Show(err);
+                    if (err.Contains("permission was denied"))
+                        MessageBox.Show("Không có quyền dùng chức năng này!");
+                    else
+                        MessageBox.Show(err);
                 }
                 else
                 {

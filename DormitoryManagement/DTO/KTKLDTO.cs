@@ -34,7 +34,7 @@ namespace DTO
             this.MaKTKL = dr["MaKTKL"].ToString();
             this.HinhThuc = dr["HinhThuc"].ToString();
             this.MoTa = dr["MoTa"].ToString();
-            this.NgayTao = dr["NgayTao"].ToString();
+            this.NgayTao = DateTime.Parse(dr["NgayTao"].ToString()).ToString("yyyy-MM-dd");
             this.MaSV = dr["MaSV"].ToString();
             this.TenSV = dr["TenSV"].ToString();
         }

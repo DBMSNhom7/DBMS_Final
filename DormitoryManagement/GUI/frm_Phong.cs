@@ -31,7 +31,8 @@ namespace GUI
                     btn_timKiem.Enabled = txb_toa.Enabled =
                     txb_phong.Enabled = txb_sucChua.Enabled =
                     txb_SVDangO.Enabled = btn_sua.Enabled =
-                    btn_taiLai.Enabled = dgv_phong.Enabled = true;
+                    btn_taiLai.Enabled = dgv_phong.Enabled =
+                    btn_SVDangO.Enabled = btn_HoaDonDienNuoc.Enabled = true;
 
                 cb_loaiPhong.Enabled = btn_luu.Enabled =
                     btn_huy.Enabled = false;
@@ -107,7 +108,8 @@ namespace GUI
                     btn_timKiem.Enabled = txb_toa.Enabled =
                     txb_phong.Enabled = txb_SVDangO.Enabled =
                     btn_sua.Enabled = btn_taiLai.Enabled =
-                    dgv_phong.Enabled = false;
+                    dgv_phong.Enabled = btn_SVDangO.Enabled =
+                    btn_HoaDonDienNuoc.Enabled = false;
 
                 cb_loaiPhong.Enabled = txb_sucChua.Enabled =
                     btn_luu.Enabled = btn_huy.Enabled = true;
@@ -129,6 +131,13 @@ namespace GUI
                 txb_sucChua.Text.Trim() == "")
             {
                 MessageBox.Show("Vui lòng nhập đủ thông tin!");
+                return;
+            }
+
+            int temp = 0;
+            if (!int.TryParse(txb_sucChua.Text, out temp) || temp < 0)
+            {
+                MessageBox.Show("Sức chứa không hợp lệ!");
                 return;
             }
 
@@ -180,7 +189,6 @@ namespace GUI
         {
             if (dgv_phong.Rows.Count > 0)
             {
-
                 Microsoft.Office.Interop.Excel.Application xcelApp = new Microsoft.Office.Interop.Excel.Application();
                 xcelApp.Application.Workbooks.Add(Type.Missing);
 
