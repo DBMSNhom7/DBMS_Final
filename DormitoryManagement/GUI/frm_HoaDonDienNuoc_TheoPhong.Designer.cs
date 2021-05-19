@@ -564,7 +564,7 @@ namespace GUI
             this.Name = "frm_HoaDonDienNuoc_TheoPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_HoaDonDienNuoc_TheoPhong2";
-            this.Load += new System.EventHandler(this.frm_HoaDonDienNuoc_TheoPhong2_Load);
+            this.Load += new System.EventHandler(this.frm_HoaDonDienNuoc_TheoPhong_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_hoaDonDienNuoc)).EndInit();
             this.panel2.ResumeLayout(false);

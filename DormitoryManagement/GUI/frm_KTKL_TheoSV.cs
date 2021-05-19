@@ -64,12 +64,10 @@ namespace GUI
             else this.Close();
         }
 
-        private void frm_KTKL_TheoSV2_Load(object sender, EventArgs e)
+        private void frm_KTKL_TheoSV_Load(object sender, EventArgs e)
         {
             LoadData();
         }
-
-        
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
@@ -85,7 +83,10 @@ namespace GUI
 
                     if (!_KTKLBLL.xoaKTKL_TheoMaKTKL(txb_maKTKL.Text, ref err))
                     {
-                        MessageBox.Show(err);
+                        if (err.Contains("permission was denied"))
+                            MessageBox.Show("Không có quyền dùng chức năng này!");
+                        else
+                            MessageBox.Show(err);
                     }
 
                     LoadData();
@@ -129,7 +130,10 @@ namespace GUI
 
             if (!_KTKLBLL.themKTKL(_KTKLDTO, ref err))
             {
-                MessageBox.Show(err);
+                if (err.Contains("permission was denied"))
+                    MessageBox.Show("Không có quyền dùng chức năng này!");
+                else
+                    MessageBox.Show(err);
             }
             else
             {
@@ -139,24 +143,26 @@ namespace GUI
             LoadData();
         }
 
-        private void dgv_KTKL_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        private void dgv_KTKL_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string maKTKL = dgv_KTKL.Rows[dgv_KTKL.CurrentCell.RowIndex].Cells[0].Value.ToString();
-
             try
             {
+                string maKTKL = dgv_KTKL.Rows[dgv_KTKL.CurrentCell.RowIndex].Cells[0].Value.ToString();
+
                 KTKLDTO ktkl = new KTKLDTO();
                 ktkl = _KTKLBLL.layKTKL_TheoMaKTKL(maKTKL);
 
                 txb_maKTKL.Text = ktkl.MaKTKL;
-                cb_hinhThuc.Items.Add(ktkl.HinhThuc);
                 cb_hinhThuc.Text = ktkl.HinhThuc;
                 dtp_ngayTao.Value = DateTime.Parse(ktkl.NgayTao);
                 txb_moTa.Text = ktkl.MoTa;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                if (ex.Message.Contains("Object reference not set to an instance of an object"))
+                    return;
+                else
+                    MessageBox.Show(ex.Message);
             }
         }
 

@@ -244,10 +244,9 @@ namespace GUI
 
         private void dgv_hoaDonDienNuoc_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            string maHoaDon = dgv_hoaDonDienNuoc.Rows[dgv_hoaDonDienNuoc.CurrentCell.RowIndex].Cells[1].Value.ToString();
-
             try
             {
+                string maHoaDon = dgv_hoaDonDienNuoc.Rows[dgv_hoaDonDienNuoc.CurrentCell.RowIndex].Cells[1].Value.ToString();
                 _hoaDonDienNuocDTO = _hoaDonDienNuocBLL.layHoaDonDienNuoc_TheoMaHoaDon(maHoaDon);
 
                 cb_maPhong.Text = _hoaDonDienNuocDTO.MaPhong;
@@ -260,7 +259,10 @@ namespace GUI
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                if (ex.Message.Contains("Object reference not set to an instance of an object"))
+                    return;
+                else
+                    MessageBox.Show(ex.Message);
             }
         }
 

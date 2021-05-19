@@ -276,7 +276,7 @@
             this.pgb_tinhTrangKTX.Margin = new System.Windows.Forms.Padding(4);
             this.pgb_tinhTrangKTX.Name = "pgb_tinhTrangKTX";
             this.pgb_tinhTrangKTX.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.pgb_tinhTrangKTX.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.pgb_tinhTrangKTX.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(184)))), ((int)(((byte)(43)))));
             this.pgb_tinhTrangKTX.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.pgb_tinhTrangKTX.ShadowDecoration.Parent = this.pgb_tinhTrangKTX;
             this.pgb_tinhTrangKTX.Size = new System.Drawing.Size(252, 224);

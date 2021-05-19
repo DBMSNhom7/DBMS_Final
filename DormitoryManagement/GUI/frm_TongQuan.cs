@@ -18,12 +18,14 @@ namespace GUI
         private int iSoPhongConTrong = 0, sSoPhongConTrong = 1;
         private int iTongSoSinhVien = 0, sTongSoSinhVien = 1;
         private int iChoOConTrong = 0, sChoOConTrong = 1;
+        private int iTinhTrang = 0;
 
         private int tongSoToa = 0;
         private int tongSoPhong = 0;
         private int soPhongConTrong = 0;
         private int tongSoSinhVien = 0;
         private int choOConTrong = 0;
+        private int tinhTrang_Value = 0;
 
         private SinhVienBLL _sinhVienBLL = new SinhVienBLL();
         private ToaBLL _toaBLL = new ToaBLL();
@@ -41,16 +43,17 @@ namespace GUI
             iSoPhongConTrong = 0;
             iTongSoSinhVien = 0;
             iChoOConTrong = 0;
+            iTinhTrang = 0;
 
-            //progressbarSucChua.Maximum = soPhongSanCo * 4; // giả thử phòng có 4 giường
-            //progressbarTyLeThanhToanHopDong.Maximum = tongSoHopDong;
-            //progressbarTyLeThanhToanDienNuoc.Maximum = tongSoHoaDonDienNuoc;
-            //progressbarPhongDaDung.Percentage = (int)((soPhongDaDung * 1.0f / soPhongSanCo) * 100);
             tongSoToa = _toaBLL.layTongSoToa();
             tongSoPhong = _phongBLL.layTongSoPhong();
             soPhongConTrong = _phongBLL.laySoPhongConTrong();
             tongSoSinhVien = _sinhVienBLL.layTongSoSinhVien();
             choOConTrong = _phongBLL.layTongSucChua() - tongSoSinhVien;
+
+            pgb_tinhTrangKTX.Minimum = 0;
+            pgb_tinhTrangKTX.Maximum = 100;
+            tinhTrang_Value = (int)(((float)tongSoSinhVien / (tongSoSinhVien + choOConTrong)) * 100);
 
             sTongSoToa = (int)tongSoToa / 10;
             sTongSoPhong = (int)tongSoPhong / 10;
@@ -61,112 +64,44 @@ namespace GUI
             timer.Enabled = true;
         }
 
-        //public static int tongSoKhu = busKhu.TongSoKhu();
-        //public static int soPhongSanCo = busPhong.SoPhongSanCo();
-        //public static int tongSoHopDong = busHopDong.TongSoHopDong();
-        //public static int tongSoHopDongDaThanhToan = busHopDong.TongSoHopDongDaThanhToan();
-        //public static int tongSoHoaDonDienNuocDaThanhToan = busDienNuoc.TongSoHoaDonDienNuocDaThanhToan();
-        //public static int tongSoHoaDonDienNuoc = busDienNuoc.TongSoHoaDonDienNuoc();
-        //public static int soPhongDaDung = busPhong.SoPhongDaDung();
-        //public static int soPhongConTrong = soPhongSanCo - soPhongDaDung;
-        //public static Tuple<int, int, int, int, int> soSinhVienTheoNganh = busSinhVien.SoSinhVienTheoNganh
-
         private void timer_Tick(object sender, EventArgs e)
         {
             if (iTongSoToa <= tongSoToa)
             {
-                if (tongSoToa - iTongSoToa < 10)
-                {
-                    lb_tongSoToa.Text = iTongSoToa.ToString();
-                    iTongSoToa++;
-                }
-                else
-                {
-                    lb_tongSoToa.Text = iTongSoToa.ToString();
-                    iTongSoToa += sTongSoToa;
-                }
+                lb_tongSoToa.Text = iTongSoToa.ToString();
+                if (tongSoToa - iTongSoToa < 10) iTongSoToa++;
+                else iTongSoToa += sTongSoToa;
             }
 
             if (iTongSoPhong <= tongSoPhong)
             {
-                if (tongSoPhong - iTongSoPhong < 10)
-                {
-                    lb_tongSoPhong.Text = iTongSoPhong.ToString();
-                    iTongSoPhong++;
-                }
-                else
-                {
-                    lb_tongSoPhong.Text = iTongSoPhong.ToString();
-                    iTongSoPhong += sTongSoPhong;
-                }
+                lb_tongSoPhong.Text = iTongSoPhong.ToString();
+                if (tongSoPhong - iTongSoPhong < 10) iTongSoPhong++;
+                else iTongSoPhong += sTongSoPhong;
             }
 
-
+            if (iTinhTrang <= tinhTrang_Value) pgb_tinhTrangKTX.Value = iTinhTrang += 2;
 
             if (iSoPhongConTrong <= soPhongConTrong)
             {
-                if (soPhongConTrong - iSoPhongConTrong < 10)
-                {
-                    lb_phongConTrong.Text = iSoPhongConTrong.ToString();
-                    iSoPhongConTrong++;
-                }
-                else
-                {
-                    lb_phongConTrong.Text = iSoPhongConTrong.ToString();
-                    iSoPhongConTrong += sSoPhongConTrong;
-                }
+                lb_phongConTrong.Text = iSoPhongConTrong.ToString();
+                if (soPhongConTrong - iSoPhongConTrong < 10) iSoPhongConTrong++;
+                else iSoPhongConTrong += sSoPhongConTrong;
             }
 
             if (iTongSoSinhVien <= tongSoSinhVien)
             {
-                if (tongSoSinhVien - iTongSoSinhVien < 10)
-                {
-                    lb_soSVDangO.Text = iTongSoSinhVien.ToString();
-                    iTongSoSinhVien++;
-                }
-                else
-                {
-                    lb_soSVDangO.Text = iTongSoSinhVien.ToString();
-                    iTongSoSinhVien += sTongSoSinhVien;
-                }
+                lb_soSVDangO.Text = iTongSoSinhVien.ToString();
+                if (tongSoSinhVien - iTongSoSinhVien < 10) iTongSoSinhVien++;
+                else iTongSoSinhVien += sTongSoSinhVien;
             }
 
             if (iChoOConTrong <= choOConTrong)
             {
-                if (choOConTrong - iChoOConTrong < 10)
-                {
-                    lb_choOConTrong.Text = iChoOConTrong.ToString();
-                    iChoOConTrong++;
-                }
-                else
-                {
-                    lb_choOConTrong.Text = iChoOConTrong.ToString();
-                    iChoOConTrong += sChoOConTrong;
-                }
+                lb_choOConTrong.Text = iChoOConTrong.ToString();
+                if (choOConTrong - iChoOConTrong < 10) iChoOConTrong++;
+                else iChoOConTrong += sChoOConTrong;
             }
-
-            //// sức chứa hiện tại = số giường sẵn có : số hợp đồng
-            //if (progressbarSucChua.Value <= tongSoHopDong) progressbarSucChua.Value += 1;
-
-            //// Tổng số khu
-            //if (iSoKhu <= tongSoKhu) { labelTongSoKhu.Text = iSoKhu.ToString(); iSoKhu += 1; }
-
-            //// Số phòng sẵn có
-            //if (iSoPhongSanCo <= soPhongSanCo) { textboxTongSoPhongSanCo.Text = iSoPhongSanCo.ToString(); iSoPhongSanCo += 1; }
-
-            //// Tổng số hợp đồng
-            //if (iHopDong <= tongSoHopDong) { labelTongSoHopDong.Text = iHopDong.ToString(); iHopDong += 1; }
-
-            // Tổng số sinh viên
-
-            // Tỷ lệ thanh toán hợp đồng
-            //if (progressbarTyLeThanhToanHopDong.Value <= tongSoHopDongDaThanhToan) { progressbarTyLeThanhToanHopDong.Value += 1; }
-
-            //// Tỷ lệ thanh toán điện nước
-            //if (progressbarTyLeThanhToanDienNuoc.Value <= tongSoHoaDonDienNuocDaThanhToan) { progressbarTyLeThanhToanDienNuoc.Value += 1; }
-
-            //// Số phòng còn trống
-            //if (iSoPhongConTrong <= soPhongConTrong) { labelSoPhongConTrong.Text = iSoPhongConTrong.ToString(); iSoPhongConTrong += 1; }
         }
 
         private void Dashboard_MouseDoubleClick(object sender, MouseEventArgs e)

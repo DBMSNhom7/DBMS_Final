@@ -69,7 +69,7 @@ namespace GUI
             LoadData();
         }
 
-     
+
         private void btn_HoaDonDienNuoc_Click(object sender, EventArgs e)
         {
             if (txb_phong.Text.Trim() != "")
@@ -141,7 +141,10 @@ namespace GUI
 
             if (!_phongBLL.suaPhong(_phongDTO, ref err))
             {
-                MessageBox.Show(err);
+                if (err.Contains("permission was denied"))
+                    MessageBox.Show("Không có quyền dùng chức năng này!");
+                else
+                    MessageBox.Show(err);
             }
             else
             {
@@ -152,10 +155,10 @@ namespace GUI
 
         private void dgv_phong_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            string maPhong = dgv_phong.Rows[dgv_phong.CurrentCell.RowIndex].Cells[0].Value.ToString();
-
             try
             {
+                string maPhong = dgv_phong.Rows[dgv_phong.CurrentCell.RowIndex].Cells[0].Value.ToString();
+
                 _phongDTO = _phongBLL.layPhong_TheoMaPhong(maPhong);
 
                 txb_toa.Text = _phongDTO.Toa;
@@ -166,7 +169,10 @@ namespace GUI
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                if (ex.Message.Contains("Object reference not set to an instance of an object"))
+                    return;
+                else
+                    MessageBox.Show(ex.Message);
             }
         }
 

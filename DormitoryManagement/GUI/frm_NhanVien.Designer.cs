@@ -704,7 +704,7 @@ namespace GUI
             this.dgv_nhanVien.ThemeStyle.RowsStyle.Height = 40;
             this.dgv_nhanVien.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.dgv_nhanVien.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dgv_nhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_nhanVien_CellClick_1);
+            this.dgv_nhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_nhanVien_CellClick);
             // 
             // MaNV
             // 

@@ -310,9 +310,6 @@
     <None Include="Resources\user %285%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\avt.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8_logout_rounded_up_100px.png" />
   </ItemGroup>
   <ItemGroup>

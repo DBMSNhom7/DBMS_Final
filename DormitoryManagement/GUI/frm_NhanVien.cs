@@ -134,7 +134,10 @@ namespace GUI
 
                     if (!_nhanVienBLL.xoaNhanVien_TheoMaNV(txb_maNV.Text, ref err))
                     {
-                        MessageBox.Show(err);
+                        if (err.Contains("permission was denied"))
+                            MessageBox.Show("Không có quyền dùng chức năng này!");
+                        else
+                            MessageBox.Show(err);
                     }
 
                     LoadData();
@@ -184,7 +187,10 @@ namespace GUI
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                if (ex.Message.Contains("permission was denied"))
+                    MessageBox.Show("Không có quyền dùng chức năng này!");
+                else
+                    MessageBox.Show(ex.Message);
             }
         }
 
@@ -229,7 +235,10 @@ namespace GUI
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                if (ex.Message.Contains("permission was denied"))
+                    MessageBox.Show("Không có quyền dùng chức năng này!");
+                else
+                    MessageBox.Show(ex.Message);
             }
         }
 
@@ -262,7 +271,10 @@ namespace GUI
 
                 if (!_nhanVienBLL.themNhanVien(_nhanVienDTO, _hopDongNVDTO, ref err))
                 {
-                    MessageBox.Show(err);
+                    if (err.Contains("permission was denied"))
+                        MessageBox.Show("Không có quyền dùng chức năng này!");
+                    else
+                        MessageBox.Show(err);
                 }
                 else
                 {
@@ -286,7 +298,10 @@ namespace GUI
 
                 if (!_nhanVienBLL.suaNhanVien(_nhanVienDTO, _hopDongNVDTO, ref err))
                 {
-                    MessageBox.Show(err);
+                    if (err.Contains("permission was denied"))
+                        MessageBox.Show("Không có quyền dùng chức năng này!");
+                    else
+                        MessageBox.Show(err);
                 }
                 else
                 {
@@ -297,12 +312,12 @@ namespace GUI
             }
         }
 
-        private void dgv_nhanVien_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        private void dgv_nhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string maNV = dgv_nhanVien.Rows[dgv_nhanVien.CurrentCell.RowIndex].Cells[0].Value.ToString();
-
             try
             {
+                string maNV = dgv_nhanVien.Rows[dgv_nhanVien.CurrentCell.RowIndex].Cells[0].Value.ToString();
+
                 _nhanVienDTO = _nhanVienBLL.layNhanVien_TheoMaNV(maNV);
 
                 txb_maNV.Text = _nhanVienDTO.MaNV;
@@ -316,7 +331,10 @@ namespace GUI
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                if (ex.Message.Contains("Object reference not set to an instance of an object"))
+                    return;
+                else
+                    MessageBox.Show(ex.Message);
             }
         }
 

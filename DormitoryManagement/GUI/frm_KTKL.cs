@@ -180,13 +180,13 @@ namespace GUI
             }
         }
 
-   
+
         private void dgv_KTKL_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string maKTKL = dgv_KTKL.Rows[dgv_KTKL.CurrentCell.RowIndex].Cells[0].Value.ToString();
-
             try
             {
+                string maKTKL = dgv_KTKL.Rows[dgv_KTKL.CurrentCell.RowIndex].Cells[0].Value.ToString();
+
                 KTKLDTO ktkl = new KTKLDTO();
                 ktkl = _KTKLBLL.layKTKL_TheoMaKTKL(maKTKL);
 
@@ -199,7 +199,10 @@ namespace GUI
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                if (ex.Message.Contains("Object reference not set to an instance of an object"))
+                    return;
+                else
+                    MessageBox.Show(ex.Message);
             }
         }
 

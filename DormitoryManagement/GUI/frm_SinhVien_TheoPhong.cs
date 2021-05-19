@@ -86,18 +86,18 @@ namespace GUI
             else this.Close();
         }
 
-        private void frm_SinhVien_TheoPhong2_Load(object sender, EventArgs e)
+        private void frm_SinhVien_TheoPhong_Load(object sender, EventArgs e)
         {
             LoadData();
         }
 
         private void dgv_sinhVien_TheoPhong_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string maSV =
-                dgv_sinhVien_TheoPhong.Rows[dgv_sinhVien_TheoPhong.CurrentCell.RowIndex].Cells[0].Value.ToString();
-
             try
             {
+                string maSV =
+                    dgv_sinhVien_TheoPhong.Rows[dgv_sinhVien_TheoPhong.CurrentCell.RowIndex].Cells[0].Value.ToString();
+
                 SinhVienDTO sv = new SinhVienDTO();
                 sv = _sinhVienBLL.laySinhVien_TheoMaSV(maSV);
 
@@ -113,7 +113,10 @@ namespace GUI
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                if (ex.Message.Contains("Object reference not set to an instance of an object"))
+                    return;
+                else
+                    MessageBox.Show(ex.Message);
             }
         }
 
@@ -186,7 +189,10 @@ namespace GUI
 
                     if (!_sinhVienBLL.xoaSinhVien_TheoMaSV(txb_maSV.Text, ref err))
                     {
-                        MessageBox.Show(err);
+                        if (err.Contains("permission was denied"))
+                            MessageBox.Show("Không có quyền dùng chức năng này!");
+                        else
+                            MessageBox.Show(err);
                     }
 
                     LoadData();
@@ -287,7 +293,10 @@ namespace GUI
 
                 if (!_sinhVienBLL.themSinhVien(_sinhVienDTO, _thanNhanDTO, _hopDongSVDTO, ref err))
                 {
-                    MessageBox.Show(err);
+                    if (err.Contains("permission was denied"))
+                        MessageBox.Show("Không có quyền dùng chức năng này!");
+                    else
+                        MessageBox.Show(err);
                 }
                 else
                 {
@@ -311,7 +320,10 @@ namespace GUI
 
                 if (!_sinhVienBLL.suaSinhVien(_sinhVienDTO, _thanNhanDTO, _hopDongSVDTO, ref err))
                 {
-                    MessageBox.Show(err);
+                    if (err.Contains("permission was denied"))
+                        MessageBox.Show("Không có quyền dùng chức năng này!");
+                    else
+                        MessageBox.Show(err);
                 }
                 else
                 {

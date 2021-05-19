@@ -27,5 +27,37 @@ namespace BLL
         {
             return new TaiKhoanDTO(_taiKhoanDAL.layTaiKhoan_TheoTenTK(taiKhoan).Rows[0]);
         }
+
+        public DataTable layTaiKhoan_DGV()
+        {
+            return _taiKhoanDAL.layTaiKhoan_DGV();
+        }
+
+        public DataTable layLoaiTK()
+        {
+            return _taiKhoanDAL.layLoaiTK();
+        }
+
+        public bool themTaiKhoan(TaiKhoanDTO tk, ref string error)
+        {
+            return _taiKhoanDAL.themTaiKhoan(tk.TenTaiKhoan, tk.MatKhau,
+                tk.IDLoaiQuyen, ref error);
+        }
+
+        public bool xoaTaiKhoan_TheoTenTK(string tenTK, ref string error)
+        {
+            return _taiKhoanDAL.xoaTaiKhoan_TheoTenTK(tenTK, ref error);
+        }
+
+        public DataTable layTaiKhoan_TimKiem_DGV(string str)
+        {
+            return _taiKhoanDAL.layTaiKhoan_TimKiem_DGV(str);
+        }
+
+        public bool suaTaiKhoan_TheoTenTK(TaiKhoanDTO tk, ref string error)
+        {
+            return _taiKhoanDAL.suaTaiKhoan_TheoTenTK(tk.TenTaiKhoan,
+                tk.MatKhau, tk.IDLoaiQuyen, ref error);
+        }
     }
 }

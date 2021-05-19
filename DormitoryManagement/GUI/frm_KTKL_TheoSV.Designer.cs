@@ -540,7 +540,7 @@ namespace GUI
             this.dgv_KTKL.ThemeStyle.RowsStyle.Height = 40;
             this.dgv_KTKL.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.dgv_KTKL.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dgv_KTKL.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_KTKL_CellClick_1);
+            this.dgv_KTKL.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_KTKL_CellClick);
             // 
             // MaKTKL
             // 
@@ -587,7 +587,7 @@ namespace GUI
             this.Name = "frm_KTKL_TheoSV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Khen thưởng kỷ luật";
-            this.Load += new System.EventHandler(this.frm_KTKL_TheoSV2_Load);
+            this.Load += new System.EventHandler(this.frm_KTKL_TheoSV_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);

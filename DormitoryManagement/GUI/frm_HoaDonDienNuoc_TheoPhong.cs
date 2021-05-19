@@ -74,12 +74,12 @@ namespace GUI
             else this.Close();
         }
 
-        private void frm_HoaDonDienNuoc_TheoPhong2_Load(object sender, EventArgs e)
+        private void frm_HoaDonDienNuoc_TheoPhong_Load(object sender, EventArgs e)
         {
             LoadData();
         }
 
-   
+
         private void btn_xoa_Click(object sender, EventArgs e)
         {
             if (txb_maHoaDon.Text.Trim() != "")
@@ -94,7 +94,10 @@ namespace GUI
 
                     if (!_hoaDonDienNuocBLL.xoaHoaDonDienNuoc_TheoMaHoaDon(txb_maHoaDon.Text, ref err))
                     {
-                        MessageBox.Show(err);
+                        if (err.Contains("permission was denied"))
+                            MessageBox.Show("Không có quyền dùng chức năng này!");
+                        else
+                            MessageBox.Show(err);
                     }
 
                     LoadData();
@@ -176,7 +179,10 @@ namespace GUI
 
                 if (!_hoaDonDienNuocBLL.themHoaDonDienNuoc(_hoaDonDienNuocDTO, ref err))
                 {
-                    MessageBox.Show(err);
+                    if (err.Contains("permission was denied"))
+                        MessageBox.Show("Không có quyền dùng chức năng này!");
+                    else
+                        MessageBox.Show(err);
                 }
                 else
                 {
@@ -194,7 +200,10 @@ namespace GUI
 
                 if (!_hoaDonDienNuocBLL.suaHoaDonDienNuoc(_hoaDonDienNuocDTO, ref err))
                 {
-                    MessageBox.Show(err);
+                    if (err.Contains("permission was denied"))
+                        MessageBox.Show("Không có quyền dùng chức năng này!");
+                    else
+                        MessageBox.Show(err);
                 }
                 else
                 {
@@ -206,10 +215,9 @@ namespace GUI
 
         private void dgv_hoaDonDienNuoc_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string maHD = dgv_hoaDonDienNuoc.Rows[dgv_hoaDonDienNuoc.CurrentCell.RowIndex].Cells[0].Value.ToString();
-
             try
             {
+                string maHD = dgv_hoaDonDienNuoc.Rows[dgv_hoaDonDienNuoc.CurrentCell.RowIndex].Cells[0].Value.ToString();
                 HoaDonDienNuocDTO hddn = new HoaDonDienNuocDTO();
                 hddn = _hoaDonDienNuocBLL.layHoaDonDienNuoc_TheoMaHoaDon(maHD);
                 txb_maHoaDon.Text = hddn.MaHoaDon;
@@ -221,7 +229,10 @@ namespace GUI
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                if (ex.Message.Contains("Object reference not set to an instance of an object"))
+                    return;
+                else
+                    MessageBox.Show(ex.Message);
             }
         }
 
